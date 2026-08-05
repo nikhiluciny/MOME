@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contact Information | MOME Portal</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#717784",
+            "tertiary-container": "#b85203",
+            "primary": "#0058a7",
+            "surface-tint": "#005eb2",
+            "on-error": "#ffffff",
+            "surface-container": "#eceef1",
+            "surface-variant": "#e0e3e6",
+            "on-primary-container": "#f3f5ff",
+            "surface-dim": "#d8dadd",
+            "surface-container-highest": "#e0e3e6",
+            "inverse-surface": "#2d3133",
+            "on-primary-fixed": "#001b3b",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#484744",
+            "error-container": "#ffdad6",
+            "background": "#f7f9fc",
+            "secondary-fixed": "#e6e2de",
+            "on-secondary-fixed": "#1c1b19",
+            "primary-fixed": "#d5e3ff",
+            "secondary": "#605e5b",
+            "on-tertiary-container": "#fff3ee",
+            "surface": "#f7f9fc",
+            "secondary-container": "#e6e2de",
+            "on-primary-fixed-variant": "#004788",
+            "error": "#ba1a1a",
+            "primary-container": "#0070d2",
+            "outline-variant": "#c1c6d5",
+            "on-surface-variant": "#414753",
+            "tertiary": "#923f00",
+            "inverse-primary": "#a7c8ff",
+            "on-surface": "#191c1e",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-tertiary-fixed": "#331100",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e6e8eb",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdbca",
+            "surface-bright": "#f7f9fc",
+            "on-background": "#191c1e",
+            "secondary-fixed-dim": "#c9c6c2",
+            "on-secondary-container": "#666461",
+            "on-tertiary-fixed-variant": "#773200",
+            "tertiary-fixed-dim": "#ffb68f",
+            "surface-container-low": "#f2f4f7",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#eff1f4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Public Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center h-full">
+        <img alt="MOME Logo" class="h-16 w-auto object-contain" src="/mome_logo_head.png" />
+      </div>
+      <div class="hidden md:flex items-center gap-8 ml-8">
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/Home Page/code.html">Home</a>
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/My Projects/my_projects_dashboard_light_nav/code.html">My
+          Projects</a>
+        <a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg"
+          href="/My Projects/permit selection page/code.html">New
+          Application</a>
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/Help Center/code.html">Help</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+
+      <a href="/My Profile/code.html"
+        class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+        <span class="material-symbols-outlined text-sm text-slate-700">person</span>
+      </a>
+    </div>
+  </nav>
+  <main class="pt-28 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <!-- Step Progress Bar -->
+    <div class="mb-12">
+      <div class="flex items-center justify-between w-full max-w-4xl mx-auto relative">
+        <!-- Progress Line Background -->
+        <div class="absolute top-5 left-0 w-full h-0.5 bg-surface-container-high z-0"></div>
+        <!-- Active Progress Line -->
+        <div class="absolute top-5 left-0 w-1/2 h-0.5 bg-primary z-0 transition-all duration-500"></div>
+        <!-- Steps -->
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-sm" style='font-variation-settings: "wght" 700;'>check</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-primary">General</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-sm" style='font-variation-settings: "wght" 700;'>check</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-primary">Locations</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg">
+            <span class="material-symbols-outlined text-sm" style='font-variation-settings: "wght" 700;'>check</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-primary">Dates</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div
+            class="w-10 h-10 rounded-full bg-white ring-4 ring-primary-fixed border-2 border-primary text-primary flex items-center justify-center shadow-xl">
+            <span class="font-bold text-sm">4</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-on-surface">Contacts</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div
+            class="w-10 h-10 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+            <span class="font-bold text-sm">5</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-outline">Insurance</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div
+            class="w-10 h-10 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+            <span class="font-bold text-sm">6</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-outline">Assets</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 z-10">
+          <div
+            class="w-10 h-10 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+            <span class="font-bold text-sm">7</span>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-outline">Review</span>
+        </div>
+      </div>
+    </div>
+    <!-- Content Area -->
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main Form Canvas -->
+      <div class="flex-1 space-y-8">
+        <div>
+          <h1 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface mb-2">Contact Information</h1>
+          <p class="text-on-surface-variant max-w-2xl">Identify key production personnel. All permits require at least
+            one Production Manager and one Location Manager for emergency site coordination.</p>
+        </div>
+        <!-- Validation Banner -->
+        <div class="bg-error-container/40 border-l-4 border-error p-5 rounded-lg flex items-start gap-4">
+          <span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+          <p class="text-on-error-container font-medium text-sm">Please add a Production Manager and a Location Manager
+            before continuing.</p>
+        </div>
+        <!-- Section: Project Users -->
+        <section>
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold font-headline">Project Users</h2>
+            <span
+              class="text-xs font-semibold px-2 py-1 bg-surface-container-high rounded text-on-surface-variant uppercase tracking-wide">Read
+              Only</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr
+                  class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-widest font-semibold">
+                  <th class="px-6 py-4">Full Name</th>
+                  <th class="px-6 py-4">Email Address</th>
+                  <th class="px-6 py-4">Role</th>
+                  <th class="px-6 py-4">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container">
+                <tr class="hover:bg-surface-container-low/30 transition-colors">
+                  <td class="px-6 py-4 font-medium">Marcus Sterling</td>
+                  <td class="px-6 py-4 text-on-surface-variant">m.sterling@horizonfilms.com</td>
+                  <td class="px-6 py-4">Applicant</td>
+                  <td class="px-6 py-4">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-700">ACTIVE</span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-surface-container-low/30 transition-colors">
+                  <td class="px-6 py-4 font-medium">Elena Rodriguez</td>
+                  <td class="px-6 py-4 text-on-surface-variant">e.rodriguez@nyc.gov</td>
+                  <td class="px-6 py-4">City Liaison</td>
+                  <td class="px-6 py-4">
+                    <span
+                      class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-700">ACTIVE</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- Section: Add Contacts -->
+        <section>
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold font-headline">Add Contacts</h2>
+            <button class="group flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+              <span
+                class="material-symbols-outlined text-lg bg-primary-fixed p-1 rounded group-hover:bg-primary group-hover:text-white transition-all">add</span>
+              <span class="">+ Add Contact</span>
+            </button>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr
+                  class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-widest font-semibold">
+                  <th class="px-6 py-4">Contact Name</th>
+                  <th class="px-6 py-4">Production Title</th>
+                  <th class="px-6 py-4">Phone Number</th>
+                  <th class="px-6 py-4 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-surface-container">
+                <tr class="hover:bg-surface-container-low/30 transition-colors">
+                  <td class="px-6 py-4 font-medium">Jameson Vance</td>
+                  <td class="px-6 py-4">
+                    <span
+                      class="px-2 py-1 bg-primary-fixed text-on-primary-fixed text-[10px] font-extrabold rounded uppercase">Producer</span>
+                  </td>
+                  <td class="px-6 py-4 text-on-surface-variant">(212) 555-0198</td>
+                  <td class="px-6 py-4 text-right">
+                    <div class="flex justify-end gap-2">
+                      <button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg">
+                        <span class="material-symbols-outlined text-sm">edit</span>
+                      </button>
+                      <button class="p-2 text-error hover:bg-error-container/20 rounded-lg">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Empty state guidance -->
+                <tr class="bg-surface-container-low/50 border-dashed border-2 border-outline-variant/30">
+                  <td class="px-6 py-12 text-center" colspan="4">
+                    <div class="flex flex-col items-center">
+                      <span class="material-symbols-outlined text-outline-variant text-4xl mb-2">person_add</span>
+                      <p class="text-on-surface-variant text-sm italic">Required contacts missing: Production Manager,
+                        Location Manager</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between pt-12">
+          <a href="/Project E-Application/step_3_company_information_light_nav/code.html"
+            class="cursor-pointer px-6 py-3 text-primary font-bold flex items-center gap-2 hover:bg-surface-container-low rounded-lg transition-all">
+            <span class="">◂ Back</span>
+          </a>
+          <div class="flex gap-4">
+            <a href="#"
+              class="cursor-pointer px-6 py-3 text-on-surface-variant font-medium hover:bg-surface-container-low rounded-lg transition-all">
+              Save Draft
+            </a>
+            <a href="/Project E-Application/step_5_insurance_light_nav/code.html"
+              class="cursor-pointer px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold flex items-center gap-2 rounded-lg shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+              <span class="">Save &amp; Continue ▸</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Contextual Sidebar / Tips -->
+      <aside class="w-full lg:w-80 space-y-6">
+        <div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
+          <h3 class="font-bold text-sm uppercase tracking-wider mb-4 text-on-surface">Why do we need this?</h3>
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">contact_emergency</span>
+              <p class="text-sm text-on-surface-variant"><strong>On-Site Emergency:</strong> We need direct lines to
+                managers who can make operational decisions if issues arise on set.</p>
+            </div>
+            <div class="flex gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">security</span>
+              <p class="text-sm text-on-surface-variant"><strong>Verification:</strong> Personnel names are
+                cross-referenced with union lists for specific filming zones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden h-48 group shadow-lg">
+          <img alt="Film production site"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            data-alt="Behind the scenes look of a large film set in New York City street with cameras and production crew in high visibility vests"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMF1OH4xXIwPAnu4kM4AjCkrtVacI-mcaEziXzx8UjPhHVA5W1asEykB7WLopjecOoV0Pac07BU3ZFv8iSLVtNWMd-HUEzjmKnKqUMvPDmMyzVuEXhcsUrspRO6TuT4qGTAVHLxcDtfK3Bj8pR1GDgEH8EmLvrj1-nd7GZBCMVE2RsfaRT1J96f0cKfCqk_uEfFicVoFVxtTrU9wPRrNOHQBBM2T1iOckUKmGLNrIhCuhhPAaMNBx2AbxmltFRECqWmgVTVoaqRn8" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-4">
+            <p class="text-white text-xs font-medium leading-tight">Filming on location in Queens, NYC. 2023.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 mt-12 border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <span class="font-bold text-slate-900 dark:text-white font-headline"><br /></span>
+        <p class="text-slate-600 dark:text-slate-400 text-sm">© 2024 City of New York. All rights reserved.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors text-sm font-semibold"
+          href="#">Privacy Policy</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors text-sm font-semibold"
+          href="#">Terms of Use</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors text-sm font-semibold"
+          href="#">NYC.gov</a>
+        <a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors text-sm font-semibold"
+          href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

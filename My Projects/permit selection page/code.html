@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MOME | Select Permits</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#e6e2de",
+                        "outline-variant": "#c1c6d5",
+                        "on-primary-fixed": "#001b3b",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "secondary": "#605e5b",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1c1b19",
+                        "primary-container": "#0070d2",
+                        "on-secondary-fixed-variant": "#484744",
+                        "surface-bright": "#f7f9fc",
+                        "outline": "#717784",
+                        "on-surface-variant": "#414753",
+                        "surface-variant": "#e0e3e6",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-container-highest": "#e0e3e6",
+                        "tertiary-fixed": "#ffdbca",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b85203",
+                        "surface-dim": "#d8dadd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#331100",
+                        "secondary-fixed": "#e6e2de",
+                        "on-primary-fixed-variant": "#004788",
+                        "on-background": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "surface-container-high": "#e6e8eb",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary-container": "#666461",
+                        "tertiary": "#923f00",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fff3ee",
+                        "surface": "#f7f9fc",
+                        "primary": "#0058a7",
+                        "surface-container": "#eceef1",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#f3f5ff",
+                        "surface-tint": "#005eb2",
+                        "surface-container-low": "#f2f4f7",
+                        "inverse-surface": "#2d3133",
+                        "inverse-primary": "#a7c8ff",
+                        "background": "#f7f9fc",
+                        "secondary-fixed-dim": "#c9c6c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .headline {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center h-full">
+                <img alt="MOME Logo" class="h-16 w-auto object-contain" src="/mome_logo_head.png" />
+            </div>
+            <div class="hidden md:flex items-center gap-8 ml-8">
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/Home Page/code.html">Home</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/My Projects/my_projects_dashboard_light_nav/code.html">My
+                    Projects</a>
+                <a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg"
+                    href="/My Projects/permit selection page/code.html">New
+                    Application</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/Help Center/code.html">Help</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+
+            <a href="/My Profile/code.html"
+                class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-sm text-slate-700">person</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="mt-24 px-8 pb-32 max-w-7xl mx-auto w-full">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="flex text-on-surface-variant text-sm mb-8 font-label">
+            <ol class="flex list-none p-0">
+                <li class="flex items-center">
+                    <a class="hover:text-primary transition-colors" href="#">Home</a>
+                    <span class="material-symbols-outlined text-sm mx-2" data-icon="chevron_right">chevron_right</span>
+                </li>
+                <li class="flex items-center">
+                    <a class="hover:text-primary transition-colors" href="#">New Application</a>
+                    <span class="material-symbols-outlined text-sm mx-2" data-icon="chevron_right">chevron_right</span>
+                </li>
+                <li class="font-semibold text-on-surface">Select Permits</li>
+            </ol>
+        </nav>
+        <!-- Header Card -->
+        <section class="mb-8">
+            <div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm border-l-4 border-primary">
+                <h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Select Your Permits</h1>
+                <p class="text-on-surface-variant text-lg max-w-3xl">Already know what you need? Select one or more
+                    permits below to start your application directly.</p>
+            </div>
+        </section>
+        <!-- Info Banner -->
+        <div
+            class="bg-primary-container text-on-primary-container p-4 rounded-lg flex items-center justify-between mb-12 shadow-sm">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+                <span class="font-medium">Not sure which permits you need? Use our Smart Intake Questionnaire
+                    instead</span>
+            </div>
+            <a class="font-bold flex items-center gap-1 hover:underline" href="#">
+                Take Questionnaire <span class="material-symbols-outlined text-lg"
+                    data-icon="arrow_forward">arrow_forward</span>
+            </a>
+        </div>
+        <!-- MOME Permits Section -->
+        <section class="mb-12">
+            <div class="flex items-center gap-2 mb-6">
+                <span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+                <h2 class="text-2xl font-bold tracking-tight">MOME Permits</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Selected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded border flex items-center gap-4 cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <input checked=""
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl" data-icon="movie">movie</span>
+                    </div>
+                    <div class="flex-grow pr-8">
+                        <h3 class="text-lg font-bold mb-1">Standard Filming Permit</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">For professional film and TV
+                            productions on NYC public property.</p>
+                        <div
+                            class="mt-3 inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-surface-container-high text-on-surface-variant uppercase tracking-wider">
+                            Most Common</div>
+                    </div>
+                </div>
+                <!-- Selected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded border flex items-center gap-4 cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <input checked=""
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-3xl" data-icon="video_library">video_library</span>
+                    </div>
+                    <div class="flex-grow pr-8">
+                        <h3 class="text-lg font-bold mb-1">Episodic/Long-Term</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Recurring location shoots for series
+                            or long-form features.</p>
+                    </div>
+                </div>
+                <!-- Unselected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded border flex items-center gap-4 cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-on-surface-variant">
+                        <span class="material-symbols-outlined text-3xl"
+                            data-icon="account_balance">account_balance</span>
+                    </div>
+                    <div class="flex-grow pr-8">
+                        <h3 class="text-lg font-bold mb-1 text-on-surface">DCAS Permit</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Required for filming within NYC
+                            city-managed buildings or interior structures.</p>
+                    </div>
+                </div>
+                <!-- Unselected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded border flex items-center gap-4 cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-on-surface-variant">
+                        <span class="material-symbols-outlined text-3xl" data-icon="description">description</span>
+                    </div>
+                    <div class="flex-grow pr-8">
+                        <h3 class="text-lg font-bold mb-1 text-on-surface">Letter in Lieu</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Formal city acknowledgement for
+                            student or low-impact productions.</p>
+                    </div>
+                </div>
+                <!-- Unselected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded border flex items-center gap-4 cursor-pointer hover:border-primary transition-all shadow-sm">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="flex-shrink-0 w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-on-surface-variant">
+                        <span class="material-symbols-outlined text-3xl" data-icon="event">event</span>
+                    </div>
+                    <div class="flex-grow pr-8">
+                        <h3 class="text-lg font-bold mb-1 text-on-surface">Red Carpet Premiere</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Specialized logistics for
+                            high-profile film premieres and events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Additional Agency Permits -->
+        <section class="mb-12">
+            <div class="flex items-center gap-2 mb-6">
+                <span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+                <h2 class="text-2xl font-bold tracking-tight">Additional Agency Permits</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                <!-- Selected Card -->
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded ring-2 ring-primary shadow-lg flex items-center gap-4 cursor-pointer">
+                    <input checked=""
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div class="w-10 h-10 bg-primary/10 flex items-center justify-center text-primary rounded">
+                        <span class="material-symbols-outlined" data-icon="park">park</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">NYC Parks</h4>
+                        <p class="text-xs text-on-surface-variant">Filming in city parks and beaches.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined" data-icon="traffic">traffic</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Traffic Coordination</h4>
+                        <p class="text-xs text-on-surface-variant">Specialized NYPD and DOT routing.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined" data-icon="flight">flight</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Drone Authorization</h4>
+                        <p class="text-xs text-on-surface-variant">Unmanned aircraft systems permit.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined"
+                            data-icon="local_fire_department">local_fire_department</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">FDNY Fire Safety</h4>
+                        <p class="text-xs text-on-surface-variant">Pyrotechnics and safety standby.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined" data-icon="subway">subway</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">MTA Transit</h4>
+                        <p class="text-xs text-on-surface-variant">Subway, bus, and rail facilities.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined" data-icon="directions_boat">directions_boat</span>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-sm">Port Authority</h4>
+                        </div>
+                        <p class="text-xs text-on-surface-variant">Bridges, tunnels, and airports.</p>
+                    </div>
+                </div>
+                <div
+                    class="relative bg-surface-container-lowest p-4 rounded shadow-sm flex items-center gap-4 cursor-pointer border border-transparent hover:border-outline-variant">
+                    <input
+                        class="absolute top-4 right-4 w-5 h-5 text-primary rounded border-outline-variant focus:ring-primary z-10"
+                        type="checkbox" />
+                    <div
+                        class="w-10 h-10 bg-surface-container-low flex items-center justify-center text-on-surface-variant rounded">
+                        <span class="material-symbols-outlined" data-icon="construction">construction</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">DOB Permit</h4>
+                        <p class="text-xs text-on-surface-variant">Scaffolding and structural equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Sticky Strip -->
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-outline-variant/30 py-4 px-6 md:px-12 z-40 shadow-[0_-8px_30px_rgb(0,0,0,0.04)]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 md:gap-12">
+                <div class="flex flex-col">
+                    <span
+                        class="text-on-surface-variant text-[10px] md:text-xs uppercase tracking-widest font-bold mb-1">Selected
+                        Permits</span>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-black text-primary leading-none">3</span>
+                        <span class="text-sm font-semibold text-on-surface">permits selected</span>
+                    </div>
+                </div>
+                <div class="h-8 w-[1px] bg-outline-variant/50 hidden md:block"></div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-on-surface-variant text-[10px] md:text-xs uppercase tracking-widest font-bold mb-1">Combined
+                        Fee Estimate</span>
+                    <span class="text-2xl font-black text-on-surface leading-none">$575.00</span>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <a href="/Project E-Application/step_1_project_profile_light_nav/code.html"
+                    class="cursor-pointer bg-primary text-white px-8 py-3 rounded font-bold flex items-center gap-3 hover:bg-primary/90 transition-all group shadow-sm">
+                    Continue to Application
+                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </a>
+                <a class="text-xs text-primary font-semibold hover:underline" href="#">Not sure? Take the Intake
+                    Questionnaire instead</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w-full mt-auto border-t border-slate-800 bg-slate-950 dark:bg-black">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full gap-4">
+            <span class="text-lg font-semibold text-white">MOME</span>
+            <div class="flex gap-6">
+                <a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">NYC.gov</a>
+                <a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Privacy Policy</a>
+                <a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Terms of Use</a>
+                <a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Contact Us</a>
+            </div>
+            <p class="text-slate-400 dark:text-slate-500 text-sm">© 2024 City of New York. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

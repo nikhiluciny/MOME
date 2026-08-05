@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#717784",
+            "tertiary-container": "#b85203",
+            "primary": "#0058a7",
+            "surface-tint": "#005eb2",
+            "on-error": "#ffffff",
+            "surface-container": "#eceef1",
+            "surface-variant": "#e0e3e6",
+            "on-primary-container": "#f3f5ff",
+            "surface-dim": "#d8dadd",
+            "surface-container-highest": "#e0e3e6",
+            "inverse-surface": "#2d3133",
+            "on-primary-fixed": "#001b3b",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#484744",
+            "error-container": "#ffdad6",
+            "background": "#f7f9fc",
+            "secondary-fixed": "#e6e2de",
+            "on-secondary-fixed": "#1c1b19",
+            "primary-fixed": "#d5e3ff",
+            "secondary": "#605e5b",
+            "on-tertiary-container": "#fff3ee",
+            "surface": "#f7f9fc",
+            "secondary-container": "#e6e2de",
+            "on-primary-fixed-variant": "#004788",
+            "error": "#ba1a1a",
+            "primary-container": "#0070d2",
+            "outline-variant": "#c1c6d5",
+            "on-surface-variant": "#414753",
+            "tertiary": "#923f00",
+            "inverse-primary": "#a7c8ff",
+            "on-surface": "#191c1e",
+            "primary-fixed-dim": "#a7c8ff",
+            "on-tertiary-fixed": "#331100",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e6e8eb",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#ffdbca",
+            "surface-bright": "#f7f9fc",
+            "on-background": "#191c1e",
+            "secondary-fixed-dim": "#c9c6c2",
+            "on-secondary-container": "#666461",
+            "on-tertiary-fixed-variant": "#773200",
+            "tertiary-fixed-dim": "#ffb68f",
+            "surface-container-low": "#f2f4f7",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#eff1f4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Public Sans"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #c1c6d5;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center h-full">
+        <img alt="MOME Logo" class="h-16 w-auto object-contain" src="/mome_logo_head.png" />
+      </div>
+      <div class="hidden md:flex items-center gap-8 ml-8">
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/Home Page/code.html">Home</a>
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/My Projects/my_projects_dashboard_light_nav/code.html">My
+          Projects</a>
+        <a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg"
+          href="/My Projects/permit selection page/code.html">New
+          Application</a>
+        <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+          href="/Help Center/code.html">Help</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+
+      <a href="/My Profile/code.html"
+        class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+        <span class="material-symbols-outlined text-sm text-slate-700">person</span>
+      </a>
+    </div>
+  </nav>
+  <main class="pt-24 pb-12 min-h-screen">
+    <div class="max-w-4xl mx-auto px-6">
+      <!-- Step Bar -->
+      <div class="mb-12">
+        <div class="flex items-center justify-between relative">
+          <div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-high -z-10 -translate-y-1/2"></div>
+          <!-- Steps 1-5 (Checked) -->
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-bold ring-4 ring-surface">
+            <span class="material-symbols-outlined !text-sm" data-icon="check" data-weight="fill"
+              style='font-variation-settings: "FILL" 1;'>check</span>
+          </div>
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-bold ring-4 ring-surface">
+            <span class="material-symbols-outlined !text-sm" data-icon="check" data-weight="fill"
+              style='font-variation-settings: "FILL" 1;'>check</span>
+          </div>
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-bold ring-4 ring-surface">
+            <span class="material-symbols-outlined !text-sm" data-icon="check" data-weight="fill"
+              style='font-variation-settings: "FILL" 1;'>check</span>
+          </div>
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-bold ring-4 ring-surface">
+            <span class="material-symbols-outlined !text-sm" data-icon="check" data-weight="fill"
+              style='font-variation-settings: "FILL" 1;'>check</span>
+          </div>
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-bold ring-4 ring-surface">
+            <span class="material-symbols-outlined !text-sm" data-icon="check" data-weight="fill"
+              style='font-variation-settings: "FILL" 1;'>check</span>
+          </div>
+          <!-- Step 6 (Active) -->
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container text-sm font-bold ring-4 ring-surface shadow-lg">
+            6
+          </div>
+          <!-- Step 7 (Pending) -->
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-bold ring-4 ring-surface">
+            7
+          </div>
+        </div>
+        <div class="flex justify-between mt-4">
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Details</span>
+          <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Document Upload</span>
+          <span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold">Review</span>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <!-- Header -->
+        <div class="mb-10">
+          <h1 class="text-4xl font-bold font-headline text-on-surface tracking-tight mb-2">Document Upload</h1>
+          <p class="text-on-surface-variant max-w-2xl">Please provide the necessary permits and signed documentation to
+            finalize your production request in New York City.</p>
+        </div>
+        <!-- Section: Supporting Documents -->
+        <section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm transition-shadow hover:shadow-md">
+          <h2 class="text-xl font-bold font-headline mb-6">Supporting Documents</h2>
+          <div
+            class="border-2 border-dashed border-outline-variant rounded-lg p-12 flex flex-col items-center justify-center bg-surface-container-low group cursor-pointer transition-colors hover:bg-surface-container-high">
+            <div
+              class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined !text-3xl" data-icon="cloud_upload">cloud_upload</span>
+            </div>
+            <p class="text-lg font-semibold text-on-surface">Drag and drop files here</p>
+            <p class="text-sm text-on-surface-variant mt-1">or <span class="text-primary font-bold">browse files</span>
+              from your computer</p>
+            <p class="text-xs text-outline mt-6">Supported formats: PDF, JPG, PNG (Max 10MB)</p>
+          </div>
+          <!-- Uploaded List Example -->
+          <div class="mt-8 space-y-3">
+            <div class="flex items-center justify-between p-4 bg-surface-container rounded border-l-4 border-primary">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+                <div>
+                  <p class="text-sm font-semibold">Site_Safety_Plan_V2.pdf</p>
+                  <p class="text-[10px] text-on-surface-variant">2.4 MB • Uploaded 2 mins ago</p>
+                </div>
+              </div>
+              <button class="text-error hover:bg-error/10 p-2 rounded-full transition-colors">
+                <span class="material-symbols-outlined !text-xl" data-icon="delete">delete</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Code of Conduct -->
+        <section class="bg-surface-container-lowest rounded-lg p-8 shadow-sm">
+          <h2 class="text-xl font-bold font-headline mb-6">Code of Conduct</h2>
+          <div
+            class="bg-surface rounded border border-outline-variant/30 h-64 overflow-y-auto p-6 text-sm leading-relaxed text-on-surface-variant scrollbar-thin">
+            <h4 class="font-bold text-on-surface mb-4">NYC Film &amp; Television Production Guidelines</h4>
+            <p class="mb-4">1. Respect for Neighborhoods: Production companies must make every effort to minimize the
+              disruption to neighbors. This includes strictly adhering to parking permit zones and noise ordinances.</p>
+            <p class="mb-4">2. Community Relations: A designated production representative must be available to address
+              local resident and merchant concerns at all times during filming activity.</p>
+            <p class="mb-4">3. Environmental Responsibility: Productions are encouraged to use sustainable practices,
+              including proper waste management and minimizing idling of production vehicles.</p>
+            <p class="mb-4">4. Safety Protocols: All activity must comply with New York State and NYC safety
+              regulations. Failure to follow safety directives from NYPD or MOME officials may result in immediate
+              permit revocation.</p>
+            <p class="mb-4">5. Use of Public Space: Public sidewalks and streets must remain accessible to the greatest
+              extent possible. Pedestrian flow should not be blocked without explicit police supervision.</p>
+            <p class="">By checking the box below, you acknowledge that you have read and agree to uphold these
+              standards throughout the duration of your permit.</p>
+          </div>
+          <div class="mt-6 flex items-start gap-3">
+            <div class="mt-1">
+              <input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" id="agree"
+                type="checkbox" />
+            </div>
+            <label class="text-sm font-medium leading-snug cursor-pointer select-none" for="agree">
+              I have read, understand, and agree to the NYC Film Production Code of Conduct and all associated terms of
+              use. <span class="text-error">*</span>
+            </label>
+          </div>
+        </section>
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between pt-6">
+          <a href="/Project E-Application/step_5_insurance_light_nav/code.html"
+            class="cursor-pointer px-6 py-3 text-primary font-bold flex items-center gap-2 hover:bg-primary/5 rounded transition-colors">
+            <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+            Back
+          </a>
+          <a href="/Project E-Application/step_7_final_review/code.html"
+            class="cursor-pointer px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">
+            Save &amp; Continue
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col items-center md:items-start">
+        <span class="font-bold text-slate-900 dark:text-white text-lg"><br /></span>
+        <p class="text-slate-600 dark:text-slate-400 text-xs mt-2">© 2024 City of New York. All rights reserved.</p>
+      </div>
+      <div class="flex gap-8">
+        <a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-blue-500 transition-colors"
+          href="#">Privacy Policy</a>
+        <a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-blue-500 transition-colors"
+          href="#">Terms of Use</a>
+        <a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-blue-500 transition-colors"
+          href="#">NYC.gov</a>
+        <a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-blue-500 transition-colors"
+          href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

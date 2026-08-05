@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MOME Film Portal - Step 2: Location Details</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1c1b19",
+                        "surface-container-high": "#e6e8eb",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadd",
+                        "on-primary-fixed-variant": "#004788",
+                        "on-surface-variant": "#414753",
+                        "tertiary-container": "#b85203",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e6e2de",
+                        "secondary": "#605e5b",
+                        "inverse-primary": "#a7c8ff",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary": "#923f00",
+                        "on-tertiary-container": "#fff3ee",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eceef1",
+                        "secondary-container": "#e6e2de",
+                        "primary": "#0058a7",
+                        "outline": "#717784",
+                        "on-tertiary-fixed": "#331100",
+                        "on-secondary-fixed-variant": "#484744",
+                        "on-primary-container": "#f3f5ff",
+                        "surface": "#f7f9fc",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-tint": "#005eb2",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fc",
+                        "on-secondary-container": "#666461",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-bright": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-container": "#0070d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .step-active {
+            box-shadow: 0 0 0 2px #0058a7;
+        }
+
+        .form-gradient {
+            background: linear-gradient(135deg, #0058a7 0%, #0070d2 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface min-h-screen">
+    <!-- Top Navigation (Shell Component) -->
+    <nav
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center h-full">
+                <img alt="MOME Logo" class="h-16 w-auto object-contain" src="/mome_logo_head.png" />
+            </div>
+            <div class="hidden md:flex items-center gap-8 ml-8">
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/Home Page/code.html">Home</a>
+                <a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg"
+                    href="/My Projects/my_projects_dashboard_light_nav/code.html">My
+                    Projects</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/My Projects/permit selection page/code.html">New
+                    Application</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="/Help Center/code.html">Help</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+
+            <a href="/My Profile/code.html"
+                class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-sm text-slate-700">person</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="pt-24 pb-12 px-6 max-w-4xl mx-auto">
+        <!-- Progress Bar Section -->
+        <div class="mb-12">
+            <div class="flex justify-between items-center mb-4 px-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-primary">Permit Questionnaire</span>
+                <span class="text-xs font-bold text-outline">Step 2 of 4</span>
+            </div>
+            <div class="relative flex items-center justify-between w-full">
+                <!-- Progress Line Background -->
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-surface-container-high rounded-full">
+                </div>
+                <!-- Active Progress Line -->
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-1 bg-primary rounded-full"></div>
+                <!-- Step Nodes -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm"
+                            style='font-variation-settings: "FILL" 1;'>check</span>
+                    </div>
+                    <span class="absolute top-10 text-[10px] font-bold text-primary whitespace-nowrap">Production</span>
+                </div>
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-white">
+                        <span class="text-sm font-bold">2</span>
+                    </div>
+                    <span class="absolute top-10 text-[10px] font-bold text-primary whitespace-nowrap">Location</span>
+                </div>
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+                        <span class="text-sm font-bold">3</span>
+                    </div>
+                    <span class="absolute top-10 text-[10px] font-bold text-outline whitespace-nowrap">Activities</span>
+                </div>
+                <div class="relative z-10 flex flex-col items-center">
+                    <div
+                        class="w-8 h-8 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+                        <span class="text-sm font-bold">4</span>
+                    </div>
+                    <span class="absolute top-10 text-[10px] font-bold text-outline whitespace-nowrap">Review</span>
+                </div>
+            </div>
+        </div>
+        <!-- Intake Card -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-xl shadow-slate-900/5 p-8 md:p-12">
+            <header class="mb-10">
+                <h1 class="font-headline text-2xl font-bold text-on-surface mb-3 tracking-tight">Where Will You Be
+                    Filming?</h1>
+                <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl">Select all location types that
+                    apply. This determines which NYC agencies need to review your application.</p>
+            </header>
+            <form class="space-y-12">
+                <!-- Multi-select Location Type Grid -->
+                <section>
+                    <label
+                        class="block text-[0.75rem] font-semibold text-outline uppercase tracking-wider mb-6">Location
+                        Type</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Location Option Card -->
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="add_road">add_road</span>
+                            <span class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Public
+                                Street</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="park">park</span>
+                            <span class="text-xs font-semibold text-on-surface-variant text-center leading-tight">NYC
+                                Park</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="domain">domain</span>
+                            <span class="text-xs font-semibold text-on-surface-variant text-center leading-tight">City
+                                Building</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="flight">flight</span>
+                            <span
+                                class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Airport</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="bridge">link</span>
+                            <span
+                                class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Bridge/Tunnel</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="sailing">sailing</span>
+                            <span
+                                class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Waterfront</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="house">house</span>
+                            <span
+                                class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Private
+                                Property</span>
+                        </label>
+                        <label
+                            class="group relative flex flex-col items-center justify-center p-4 h-32 rounded-lg bg-surface border border-transparent hover:border-primary/20 hover:bg-surface-container-low transition-all cursor-pointer">
+                            <input class="absolute top-3 right-3 w-4 h-4 rounded text-primary focus:ring-primary/20"
+                                type="checkbox" />
+                            <span class="material-symbols-outlined text-primary mb-2 text-3xl"
+                                data-icon="more_horiz">more_horiz</span>
+                            <span
+                                class="text-xs font-semibold text-on-surface-variant text-center leading-tight">Other</span>
+                        </label>
+                    </div>
+                </section>
+                <!-- Detailed Address Fields -->
+                <div class="grid grid-cols-12 gap-x-6 gap-y-8">
+                    <div class="col-span-12">
+                        <label class="block text-[0.75rem] font-semibold text-on-surface-variant mb-2 px-1">Primary
+                            Filming Address</label>
+                        <input
+                            class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant focus:ring-2 focus:ring-primary/40 rounded-lg h-12 px-4 transition-all duration-200 placeholder:text-outline-variant"
+                            placeholder="e.g. 1 Centre Street" type="text" />
+                    </div>
+                    <div class="col-span-12 md:col-span-8">
+                        <label class="block text-[0.75rem] font-semibold text-on-surface-variant mb-2 px-1">Cross
+                            Streets</label>
+                        <input
+                            class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant focus:ring-2 focus:ring-primary/40 rounded-lg h-12 px-4 transition-all duration-200 placeholder:text-outline-variant"
+                            placeholder="e.g. Chambers St &amp; Reade St" type="text" />
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <label
+                            class="block text-[0.75rem] font-semibold text-on-surface-variant mb-2 px-1">Borough</label>
+                        <select
+                            class="w-full bg-surface-container-lowest border-0 ring-1 ring-outline-variant focus:ring-2 focus:ring-primary/40 rounded-lg h-12 px-4 appearance-none transition-all duration-200">
+                            <option value="">Select Borough</option>
+                            <option>Manhattan</option>
+                            <option>Brooklyn</option>
+                            <option>Queens</option>
+                            <option>The Bronx</option>
+                            <option>Staten Island</option>
+                        </select>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 p-6 bg-surface-container-low rounded-lg">
+                        <span
+                            class="block text-[0.75rem] font-semibold text-on-surface-variant mb-4 uppercase tracking-tight">Street
+                            Closures</span>
+                        <div class="flex items-center gap-8">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary/20"
+                                    name="street_closure" type="radio" />
+                                <span class="text-sm font-medium text-on-surface">Yes</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input checked=""
+                                    class="w-5 h-5 text-primary border-outline-variant focus:ring-primary/20"
+                                    name="street_closure" type="radio" />
+                                <span class="text-sm font-medium text-on-surface">No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 p-6 bg-surface-container-low rounded-lg">
+                        <span
+                            class="block text-[0.75rem] font-semibold text-on-surface-variant mb-4 uppercase tracking-tight">Additional
+                            Filming Locations?</span>
+                        <div class="flex items-center gap-8">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary/20"
+                                    name="additional_loc" type="radio" />
+                                <span class="text-sm font-medium text-on-surface">Yes</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input checked=""
+                                    class="w-5 h-5 text-primary border-outline-variant focus:ring-primary/20"
+                                    name="additional_loc" type="radio" />
+                                <span class="text-sm font-medium text-on-surface">No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="flex items-center justify-between pt-10 mt-10 border-t border-surface-container-high">
+                    <a href="/My Projects/intake_step_1_project_info/code.html"
+                        class="flex items-center gap-2 px-6 h-12 rounded bg-transparent border border-outline-variant text-primary font-bold text-sm hover:bg-surface-container-low transition-all active:scale-95"
+                        type="button">
+                        <span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+                        Previous
+                    </a>
+                    <a href="/My Projects/intake_step_3_activity_equipment/code.html"
+                        class="form-gradient flex items-center gap-2 px-10 h-12 rounded text-on-primary font-bold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95"
+                        type="button">
+                        Next
+                        <span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <!-- Supportive Visual Element -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 opacity-60">
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-outline" data-icon="info">info</span>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Ensure you have listed all filming addresses.
+                    Failure to disclose location details can result in permit revocation by NYPD or MOME Movie Units.
+                </p>
+            </div>
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-outline" data-icon="verified">verified</span>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Locations within NYC Parks require a separate
+                    internal review. Selecting "NYC Park" will automatically route this request to the Parks Department.
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer (Shell Component) -->
+    <footer class="bg-slate-900 dark:bg-black w-full py-12">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-8 border-t border-slate-800 max-w-screen-2xl mx-auto pt-8">
+            <div class="font-bold text-white mb-4 md:mb-0"><br /></div>
+            <div class="flex gap-8 mb-6 md:mb-0">
+                <a class="text-slate-400 hover:text-white transition-colors text-xs" href="#">NYC.gov</a>
+                <a class="text-slate-400 hover:text-white transition-colors text-xs" href="#">Privacy Policy</a>
+                <a class="text-slate-400 hover:text-white transition-colors text-xs" href="#">Terms of Use</a>
+            </div>
+            <p class="text-slate-400 text-xs">© 2024 City of New York. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
