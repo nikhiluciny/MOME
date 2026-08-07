@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Help Center | MOME Film Permit Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#a7c8ff",
+                    "tertiary-container": "#b85203",
+                    "on-secondary-fixed-variant": "#484744",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-bright": "#f7f9fc",
+                    "outline": "#717784",
+                    "on-primary-container": "#f3f5ff",
+                    "primary-container": "#0070d2",
+                    "on-secondary-container": "#666461",
+                    "tertiary-fixed-dim": "#ffb68f",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d8dadd",
+                    "surface-tint": "#005eb2",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "inverse-surface": "#2d3133",
+                    "on-tertiary-container": "#fff3ee",
+                    "surface": "#f7f9fc",
+                    "inverse-on-surface": "#eff1f4",
+                    "secondary-fixed": "#e6e2de",
+                    "on-primary-fixed": "#001b3b",
+                    "on-background": "#191c1e",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d5e3ff",
+                    "tertiary": "#923f00",
+                    "surface-variant": "#e0e3e6",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e0e3e6",
+                    "secondary-container": "#e6e2de",
+                    "on-surface-variant": "#414753",
+                    "on-tertiary-fixed-variant": "#773200",
+                    "outline-variant": "#c1c6d5",
+                    "on-secondary-fixed": "#1c1b19",
+                    "on-primary-fixed-variant": "#004788",
+                    "secondary": "#605e5b",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e6e8eb",
+                    "primary": "#0058a7",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed": "#331100",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f4f7",
+                    "surface-container": "#eceef1",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9fc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav { border-bottom: 2px solid #0058a7; }
+    </style>
+</head>
+<body class="bg-surface text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-slate-900/90 dark:bg-slate-950/95 backdrop-blur-xl shadow-2xl shadow-slate-900/20 fixed top-0 z-50 w-full">
+<div class="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="MOME Logo" class="h-8 w-auto" data-alt="Official logo for the NYC Mayor's Office of Media and Entertainment in a clean professional minimalist style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJDlNZiJyKuo9bfTjIpzd8WS8sQUYsF9JDaq_2GCm6NVCmzRONjcdAvR8BMGa1ITaeqc7aD_3rDbrg1TTQzszmPXPBqZ5RC51SxbAuQolKgLVT1CM1ZCU_8TayPS_J1BCfPUiEix89NTItYbQHfMrKngpjV9sASkPRcrtSS0hUgWMY7CylMdXNVzpHQVHo8qa2J8Vq9zGZc_h2TL61xyrlgdfZBPQAzanyRV71meQWMx7c-kyCRvps1Vm7dQOwc6uKtWKTMWFNTDA"/>
+<span class="text-xl font-bold tracking-tighter text-white">MOME</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="text-slate-300 hover:text-white transition-colors text-xs font-semibold tracking-wide h-full flex items-center" href="#">Home</a>
+<a class="text-slate-300 hover:text-white transition-colors text-xs font-semibold tracking-wide h-full flex items-center" href="#">My Projects</a>
+<a class="text-slate-300 hover:text-white transition-colors text-xs font-semibold tracking-wide h-full flex items-center" href="#">New Application</a>
+<a class="text-white border-b-2 border-blue-500 pb-1 text-xs font-semibold tracking-wide h-full flex items-center" href="#">Help</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-300 hover:bg-white/10 transition-all duration-300 rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-16">
+<!-- Breadcrumb & Hero -->
+<div class="bg-surface-container-lowest pt-8 pb-12 shadow-sm">
+<div class="max-w-screen-xl mx-auto px-8">
+<nav class="flex text-on-surface-variant text-xs mb-6 font-medium">
+<span>Home</span>
+<span class="mx-2">/</span>
+<span class="text-primary font-semibold">Help Center</span>
+</nav>
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight mb-2">Help Center</h1>
+<p class="text-on-surface-variant mb-8 text-lg">Find answers to common questions about NYC film permitting</p>
+<div class="relative max-w-3xl">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface placeholder-outline text-md transition-all" placeholder="Search for answers..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="bg-surface-container-low py-12">
+<div class="max-w-screen-xl mx-auto px-8 grid grid-cols-12 gap-8">
+<!-- FAQ Accordion Column -->
+<div class="col-span-12 lg:col-span-8 space-y-4">
+<!-- Category: Getting Started -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all border border-outline-variant/10">
+<button class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-surface-container transition-colors">
+<span class="font-bold text-on-surface">Getting Started</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+<div class="px-6 pb-6 pt-2">
+<div class="border-t border-surface-container pt-4">
+<div class="flex items-start justify-between group cursor-pointer">
+<h3 class="text-primary font-semibold text-md mb-2">What permits do I need to film in New York City?</h3>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">expand_less</span>
+</div>
+<div class="text-on-surface-variant text-sm leading-relaxed space-y-3">
+<p>Most professional filming and photography on public property in New York City requires a permit from the Mayor's Office of Media and Entertainment (MOME).</p>
+<ul class="list-disc pl-5 space-y-1">
+<li><strong>Premiere Permit:</strong> For productions with significant equipment or parking needs.</li>
+<li><strong>Standard Permit:</strong> For most feature films, television shows, and commercials.</li>
+<li><strong>Student/Non-Profit:</strong> Reduced fee permits for educational or charitable projects.</li>
+</ul>
+<p>Projects that do not interfere with pedestrian or vehicular traffic and use only hand-held equipment (camera and tripod) may not require a formal permit but are encouraged to register.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Insurance Requirements -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-surface-container transition-colors">
+<span class="font-bold text-on-surface">Insurance Requirements</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+<!-- Category: Permit Types -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-surface-container transition-colors">
+<span class="font-bold text-on-surface">Permit Types</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+<!-- Category: Amendments & Changes -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-surface-container transition-colors">
+<span class="font-bold text-on-surface">Amendments &amp; Changes</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+<!-- Category: Payment & Fees -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10">
+<button class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-surface-container transition-colors">
+<span class="font-bold text-on-surface">Payment &amp; Fees</span>
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Sidebar Column -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- AI Assistant Card -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/20 flex flex-col h-[500px]">
+<div class="bg-on-primary-fixed-variant px-4 py-3 flex items-center justify-between rounded-t-lg">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1 rounded">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<span class="text-white font-bold text-sm">Ask MOME Assistant</span>
+</div>
+<span class="material-symbols-outlined text-white/70 text-sm">more_horiz</span>
+</div>
+<div class="flex-grow p-4 overflow-y-auto space-y-4 text-sm bg-surface">
+<div class="flex gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-xs">smart_toy</span>
+</div>
+<div class="bg-surface-container px-3 py-2 rounded-lg rounded-tl-none">
+<p class="text-on-surface">Hello! I'm the MOME digital assistant. How can I help you with your filming application today?</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="bg-primary text-white px-3 py-2 rounded-lg rounded-tr-none max-w-[80%]">
+<p>I need info on filming in Central Park next Tuesday.</p>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-xs">smart_toy</span>
+</div>
+<div class="bg-surface-container px-3 py-2 rounded-lg rounded-tl-none">
+<p class="text-on-surface">Filming in Central Park requires coordination with both MOME and the Parks Department. For Tuesday, you'll need an expedited review. Have you already secured your insurance certificate?</p>
+</div>
+</div>
+</div>
+<div class="p-3 border-t border-outline-variant/10">
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-lg py-2 pl-3 pr-10 text-sm focus:ring-1 focus:ring-primary" placeholder="Type a message..." type="text"/>
+<button class="absolute right-2 top-1.5 text-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contact Us Card -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-sm border border-outline-variant/10">
+<h2 class="text-lg font-bold text-on-surface mb-6">Contact Us</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Phone</p>
+<p class="text-on-surface font-semibold">212-489-6710</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email</p>
+<p class="text-on-surface font-semibold">permits@media.nyc.gov</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Hours</p>
+<p class="text-on-surface font-semibold">Mon-Fri, 9AM - 5PM EST</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Office</p>
+<p class="text-on-surface text-sm">1 Centre Street, 26th Floor<br/>New York, NY 10007</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 w-full py-12 mt-auto">
+<div class="flex flex-col gap-2">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 NYC Mayor's Office of Media &amp; Entertainment. All rights reserved.</p>
+<p class="text-slate-400 dark:text-slate-500 text-[11px] uppercase tracking-widest font-bold">Official Website of the City of New York</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-widest font-bold hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-widest font-bold hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-all" href="#">Terms of Use</a>
+<a class="text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-widest font-bold hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-all" href="#">Accessibility</a>
+<a class="text-slate-500 dark:text-slate-400 text-[11px] uppercase tracking-widest font-bold hover:text-blue-600 dark:hover:text-blue-300 underline-offset-4 hover:underline transition-all" href="#">Contact City Hall</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -107,46 +107,33 @@
 
 <body class="bg-surface-container-low text-on-surface min-h-screen">
     <!-- TopNavBar Execution -->
-    <header class="bg-white/95 backdrop-blur-xl border-b border-surface-container-high sticky top-0 z-50">
-        <div class="flex justify-between items-center w-full px-8 py-3 max-w-[1440px] mx-auto">
-            <div class="flex items-center gap-8">
-                <a class="flex items-center" href="#" style="">
-                    <img alt="MOME Logo" class="w-auto object-contain h-16"
-                        src="https://lh3.googleusercontent.com/aida/ADBb0uiBcbPm-Qya8LkBy4ae3ef7B5nmQzueJAivAtEtLh2k0o1zmoSDe6urmF6lEs0ikWldQXZbKExS66hQz-zmfQzPBtKMwyvh0SwN34FFW0VFN3y9vcLbOsNm8lrXD2pZgEY_kN15qzws_HW1NktxgtYu61MZpN_6TW8Z_RSm59Pc974e2iR4tMTcq_OKLGga_1a6pZWYjo8aoKbZKydoPzeSNwpElaIvXtdv0-bhCZTCydNSXmDTBAVNTdOn22vJ2pb-IxCa8PSMiw"
-                        style="" />
-                </a>
-                <nav class="hidden md:flex items-center gap-6">
-                    <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base"
-                        href="#" style="">Permits</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base"
-                        href="#" style="">Productions</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base"
-                        href="#" style="">Locations</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base"
-                        href="#" style="">Resources</a>
-                </nav>
+     <nav
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center h-full">
+                <img alt="MOME Logo" class="h-16 w-auto object-contain" src="../mome_logo_head.png" />
             </div>
-            <div class="flex items-center gap-4">
-                <button
-                    class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all duration-300"
-                    style="">
-                    <span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
-                </button>
-                <button
-                    class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-all duration-300"
-                    style="">
-                    <span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
-                </button>
-                <div
-                    class="w-8 h-8 rounded-full bg-primary-container overflow-hidden ring-2 ring-surface-container-high">
-                    <img alt="User profile" class="w-full h-full object-cover"
-                        data-alt="Close-up portrait of a professional male in a corporate setting with soft natural window lighting and blurred office background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2MFcNhzcQo5sYBP5muLEGOoPg8jnGvbMWhVk5ar6HOzJfLDehhYqyZdqijNadLKiFbGO2yIZi5MxczjEkPOS3lF6op0ejsw8CPdJiHqZ-BpPdC-0JFH8G1-tD4JszwCDG9-XnsU3M8mnUxwq1LZfXRZ1kRvD4Ap089aCGqntoy-oaT0H-bH6ctbkUovcfvNNRHKbDaUE_HukWiqDmLswymEbU0AERar2NDmZ2diTdx7pZIfcjSO0VVUyF1xjoglJApsvrgXwGNCk"
-                        style="" />
-                </div>
+            <div class="hidden md:flex items-center gap-8 ml-8">
+                <a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg"
+                    href="code.html">Home</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="../My%20Projects/my_projects_dashboard_light_nav/code.html">My
+                    Projects</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="../My%20Projects/permit%20selection%20page/code.html">New
+                    Application</a>
+                <a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg"
+                    href="../Help%20Center/code.html">Help</a>
             </div>
         </div>
-    </header>
+        <div class="flex items-center gap-4">
+
+            <a href="../My%20Profile/code.html"
+                class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+                <span class="material-symbols-outlined text-sm text-slate-700">person</span>
+            </a>
+        </div>
+    </nav>
     <main class="max-w-[1440px] mx-auto flex">
         <!-- SideNavBar Execution -->
         <aside
@@ -205,49 +192,73 @@
                 <!-- Left Column -->
                 <div class="col-span-12 xl:col-span-8 space-y-8">
                     <!-- Card 1: Personal Information -->
-                    <div
+                    <div id="personal-info-card"
                         class="bg-surface-container-lowest p-8 rounded-lg shadow-[0_40px_40px_-15px_rgba(0,0,0,0.04)] relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
                         <div class="flex justify-between items-center mb-8">
                             <h3 class="text-xl font-bold headline-sm" style="">Personal Information</h3>
-                            <button
-                                class="flex items-center gap-2 px-4 py-2 border border-outline-variant/40 rounded text-primary text-sm font-semibold hover:bg-primary/5 transition-all"
-                                style="">
-                                <span class="material-symbols-outlined text-sm" data-icon="edit" style="">edit</span>
-                                Edit
-                            </button>
+                            <div class="flex items-center gap-2">
+                                <button id="pi-edit-btn"
+                                    class="flex items-center gap-2 px-4 py-2 border border-outline-variant/40 rounded text-primary text-sm font-semibold hover:bg-primary/5 transition-all"
+                                    style="">
+                                    <span class="material-symbols-outlined text-sm" data-icon="edit" style="">edit</span>
+                                    Edit
+                                </button>
+                                <button id="pi-cancel-btn"
+                                    class="hidden items-center gap-2 px-4 py-2 border border-outline-variant/40 rounded text-on-surface-variant text-sm font-semibold hover:bg-surface-container transition-all"
+                                    style="">
+                                    <span class="material-symbols-outlined text-sm" data-icon="close" style="">close</span>
+                                    Cancel
+                                </button>
+                                <button id="pi-save-btn"
+                                    class="hidden items-center gap-2 px-4 py-2 rounded bg-primary text-white text-sm font-semibold hover:bg-primary-container transition-all"
+                                    style="">
+                                    <span class="material-symbols-outlined text-sm" data-icon="check" style="">check</span>
+                                    Save
+                                </button>
+                            </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
                             <div class="space-y-1">
                                 <label
                                     class="block text-[0.75rem] font-semibold text-on-surface-variant uppercase tracking-wider"
                                     style="">First Name</label>
-                                <p class="text-on-surface font-medium py-1" style="">Johnathan</p>
+                                <p class="pi-view text-on-surface font-medium py-1" data-field="firstName" style="">Johnathan</p>
+                                <input class="pi-input hidden w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                                    data-field="firstName" type="text" />
                             </div>
                             <div class="space-y-1">
                                 <label
                                     class="block text-[0.75rem] font-semibold text-on-surface-variant uppercase tracking-wider"
                                     style="">Last Name</label>
-                                <p class="text-on-surface font-medium py-1" style="">Stern</p>
+                                <p class="pi-view text-on-surface font-medium py-1" data-field="lastName" style="">Stern</p>
+                                <input class="pi-input hidden w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                                    data-field="lastName" type="text" />
                             </div>
                             <div class="space-y-1">
                                 <label
                                     class="block text-[0.75rem] font-semibold text-on-surface-variant uppercase tracking-wider"
                                     style="">Email Address</label>
-                                <p class="text-on-surface font-medium py-1" style="">weher38298@bpotogo.com</p>
+                                <p class="pi-view text-on-surface font-medium py-1" data-field="email" style="">weher38298@bpotogo.com</p>
+                                <input class="pi-input hidden w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                                    data-field="email" type="email" />
                             </div>
                             <div class="space-y-1">
                                 <label
                                     class="block text-[0.75rem] font-semibold text-on-surface-variant uppercase tracking-wider"
                                     style="">Phone</label>
-                                <p class="text-on-surface font-medium py-1" style="">(380) 260-3245</p>
+                                <p class="pi-view text-on-surface font-medium py-1" data-field="phone" style="">(380) 260-3245</p>
+                                <input class="pi-input hidden w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                                    data-field="phone" type="tel" />
                             </div>
                             <div class="md:col-span-2 space-y-1">
                                 <label
                                     class="block text-[0.75rem] font-semibold text-on-surface-variant uppercase tracking-wider"
                                     style="">Address</label>
-                                <p class="text-on-surface font-medium py-1" style="">101 Hailmary Rd, Manhattan, NY
+                                <p class="pi-view text-on-surface font-medium py-1" data-field="address" style="">101 Hailmary Rd, Manhattan, NY
                                     11101</p>
+                                <input class="pi-input hidden w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-2 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                                    data-field="address" type="text" />
                             </div>
                         </div>
                     </div>
@@ -391,6 +402,72 @@
             </div>
         </div>
     </footer>
+
+    <!-- Inline edit for Personal Information card -->
+    <script>
+        (function () {
+            var card = document.getElementById('personal-info-card');
+            if (!card) return;
+
+            var editBtn = document.getElementById('pi-edit-btn');
+            var saveBtn = document.getElementById('pi-save-btn');
+            var cancelBtn = document.getElementById('pi-cancel-btn');
+            var views = card.querySelectorAll('.pi-view');
+            var inputs = card.querySelectorAll('.pi-input');
+
+            function inputFor(field) {
+                return card.querySelector('.pi-input[data-field="' + field + '"]');
+            }
+            function viewFor(field) {
+                return card.querySelector('.pi-view[data-field="' + field + '"]');
+            }
+
+            function enterEdit() {
+                inputs.forEach(function (input) {
+                    input.value = viewFor(input.dataset.field).textContent.trim();
+                    input.classList.remove('hidden');
+                });
+                views.forEach(function (v) { v.classList.add('hidden'); });
+                editBtn.classList.add('hidden');
+                saveBtn.classList.remove('hidden');
+                saveBtn.classList.add('flex');
+                cancelBtn.classList.remove('hidden');
+                cancelBtn.classList.add('flex');
+                var first = inputs[0];
+                if (first) first.focus();
+            }
+
+            function exitEdit() {
+                inputs.forEach(function (input) { input.classList.add('hidden'); });
+                views.forEach(function (v) { v.classList.remove('hidden'); });
+                editBtn.classList.remove('hidden');
+                saveBtn.classList.add('hidden');
+                saveBtn.classList.remove('flex');
+                cancelBtn.classList.add('hidden');
+                cancelBtn.classList.remove('flex');
+            }
+
+            function save() {
+                inputs.forEach(function (input) {
+                    viewFor(input.dataset.field).textContent = input.value;
+                });
+                exitEdit();
+                // Prototype only: values live in-memory. Wire this up to your backend/save API here.
+            }
+
+            editBtn.addEventListener('click', enterEdit);
+            cancelBtn.addEventListener('click', exitEdit);
+            saveBtn.addEventListener('click', save);
+
+            // Enter saves, Escape cancels while editing
+            inputs.forEach(function (input) {
+                input.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') { e.preventDefault(); save(); }
+                    if (e.key === 'Escape') { exitEdit(); }
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

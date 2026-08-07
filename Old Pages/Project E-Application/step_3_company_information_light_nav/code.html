@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Company Information | MOME Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#717784",
+                        "tertiary-container": "#b85203",
+                        "primary": "#0058a7",
+                        "surface-tint": "#005eb2",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eceef1",
+                        "surface-variant": "#e0e3e6",
+                        "on-primary-container": "#f3f5ff",
+                        "surface-dim": "#d8dadd",
+                        "surface-container-highest": "#e0e3e6",
+                        "inverse-surface": "#2d3133",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#484744",
+                        "error-container": "#ffdad6",
+                        "background": "#f7f9fc",
+                        "secondary-fixed": "#e6e2de",
+                        "on-secondary-fixed": "#1c1b19",
+                        "primary-fixed": "#d5e3ff",
+                        "secondary": "#605e5b",
+                        "on-tertiary-container": "#fff3ee",
+                        "surface": "#f7f9fc",
+                        "secondary-container": "#e6e2de",
+                        "on-primary-fixed-variant": "#004788",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0070d2",
+                        "outline-variant": "#c1c6d5",
+                        "on-surface-variant": "#414753",
+                        "tertiary": "#923f00",
+                        "inverse-primary": "#a7c8ff",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-tertiary-fixed": "#331100",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e6e8eb",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-bright": "#f7f9fc",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-secondary-container": "#666461",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "surface-container-low": "#f2f4f7",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white border-b border-surface-variant shadow-sm flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-12">
+<div class="flex items-center">
+<img alt="MOME Logo" class="w-auto object-contain h-20" src="https://lh3.googleusercontent.com/aida/ADBb0uhw06_V_zaPDFxhEySw0ZpIEcjiBKoNhsZ7n7fnAlbg8KoAMn2CAu-Xkx8Qmbyj-L62T68NGbJZ3cE58lSgDRFBpBBnKcsIX7qb-Fy2RAw14zvkPFTyuekE8KaQhzlH_V-RBKL7KiUVbXvSZiWcBkMbC7BnsO12a7V95W88D9jXC7ABjm8fGqZC1soHG_dgQ66lXHOOwV3D0FOUAtDAU3VNDkkzXU3B4CG0tUqEyvhyckDtLu7gq_vD3KDTw1CarnEXHCtWsw4z" style=""/>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">My Projects</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-semibold text-base" href="#" style="">New Application</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-full" style="">
+<span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-full" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden bg-surface-container border border-surface-variant ml-2">
+<img alt="User profile dropdown" class="w-full h-full object-cover" data-alt="professional portrait of a municipal employee in business attire with a warm neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu8rKP1Ro7a0Z0OQ0IYeDud2Y6cbjBa3xyBN5W2HYRUQbI-3zNcGVvLFvRRksE1c1WCZLo1mivOGnbKrIVY7sevseXO4_bEpzsPn4yW9AtyV-8g5v_9EThIfkxi0lzvyLedcHVGf4vZnkhzOuN8cvHu3eW43giFpph_7z2TowKCZ_zAYr-Sz3hIO7_vmxyZ6_KLHyJd5RQBXAzxqDOeT3sHz3UjOCYD-rdDr_t3JS9azwHRJN0ek1ahKKXi02PdP7cbFuKS9OmSjM" style=""/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Step Progress Bar -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-variant -translate-y-1/2 z-0"></div>
+<!-- Step 1 Done -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined" data-icon="check" style='font-variation-settings: "FILL" 0; font-weight: 700;'>check</span>
+</div>
+<span class="absolute -bottom-6 text-[10px] font-bold uppercase tracking-wider text-outline" style="">Contact</span>
+</div>
+<!-- Step 2 Done -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined" data-icon="check" style='font-variation-settings: "FILL" 0; font-weight: 700;'>check</span>
+</div>
+<span class="absolute -bottom-6 text-[10px] font-bold uppercase tracking-wider text-outline" style="">Project</span>
+</div>
+<!-- Step 3 Active -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-white border-4 border-primary text-primary flex items-center justify-center shadow-xl">
+<span class="font-bold" style="">3</span>
+</div>
+<span class="absolute -bottom-6 text-[10px] font-bold uppercase tracking-wider text-primary" style="">Company</span>
+</div>
+<!-- Step 4 Pending -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-outline flex items-center justify-center">
+<span class="font-bold" style="">4</span>
+</div>
+</div>
+<!-- Step 5 Pending -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-outline flex items-center justify-center">
+<span class="font-bold" style="">5</span>
+</div>
+</div>
+<!-- Step 6 Pending -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-outline flex items-center justify-center">
+<span class="font-bold" style="">6</span>
+</div>
+</div>
+<!-- Step 7 Pending -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-outline flex items-center justify-center">
+<span class="font-bold" style="">7</span>
+</div>
+</div>
+</div>
+</div>
+<header class="mb-10 text-center md:text-left">
+<p class="text-primary font-semibold text-sm uppercase tracking-widest mb-2" style="">Step 3 of 7</p>
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight" style="">Company Information</h1>
+</header>
+<form class="space-y-8">
+<!-- Primary Field Section -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-l-4 border-primary">
+<div class="max-w-xl">
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" for="company_name" style="">
+                        Company Name*
+                        <span class="material-symbols-outlined text-primary text-lg ml-1 cursor-help" data-icon="info" style="">info</span>
+</label>
+<input class="w-full h-12 bg-surface px-4 rounded-lg border-none focus:ring-2 focus:ring-primary/20 transition-all" id="company_name" name="company_name" placeholder="Enter legal business name" type="text"/>
+</div>
+</div>
+<!-- Bento Grid Layout for Offices -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Local Office Information -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on" style="">location_on</span>
+</div>
+<h2 class="text-xl font-bold text-on-surface" style="">Local Office Information</h2>
+</div>
+<div class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Address 1*</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Address 2</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">City*</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">State*</label>
+<select class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20">
+<option>New York</option>
+<option>California</option>
+<option>New Jersey</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-1">
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Zip*</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Phone*</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" placeholder="(212) 000-0000" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Fax</label>
+<input class="w-full h-11 bg-surface px-4 rounded border-none focus:ring-2 focus:ring-primary/20" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Main Office Information -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-on-surface-variant/10 rounded flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="corporate_fare" style="">corporate_fare</span>
+</div>
+<h2 class="text-xl font-bold text-on-surface" style="">Main Office Information</h2>
+</div>
+<label class="relative inline-flex items-center cursor-pointer" style="">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+<span class="ms-3 text-xs font-medium text-on-surface" style="">Same as Local?</span>
+</label>
+</div>
+<div class="space-y-6 opacity-60 pointer-events-none">
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Address 1*</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Address 2</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">City*</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">State*</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-1">
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Zip*</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Phone*</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase tracking-wider mb-2" style="">Fax</label>
+<input class="w-full h-11 bg-surface-container-lowest px-4 rounded border-none" type="tel"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<button class="order-2 sm:order-1 flex items-center gap-2 px-8 h-12 text-primary font-bold hover:bg-primary/5 transition-colors rounded" style="" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back" style="">arrow_back</span>
+                    Back
+                </button>
+<button class="order-1 sm:order-2 w-full sm:w-auto flex items-center justify-center gap-2 px-10 h-12 bg-gradient-to-r from-primary to-primary-container text-white font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all rounded" style="" type="submit">
+                    Save &amp; Continue
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-bold text-slate-900 dark:text-white text-lg" style=""><br/></span>
+<p class="text-sm text-slate-600 dark:text-slate-400" style="">© 2024 City of New York. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold" href="#" style="">Privacy Policy</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold" href="#" style="">Terms of Use</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold" href="#" style="">NYC.gov</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold" href="#" style="">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

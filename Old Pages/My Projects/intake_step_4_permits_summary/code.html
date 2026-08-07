@@ -1,0 +1,268 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1c1b19",
+                        "surface-container-high": "#e6e8eb",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadd",
+                        "on-primary-fixed-variant": "#004788",
+                        "on-surface-variant": "#414753",
+                        "tertiary-container": "#b85203",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e6e2de",
+                        "secondary": "#605e5b",
+                        "inverse-primary": "#a7c8ff",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary": "#923f00",
+                        "on-tertiary-container": "#fff3ee",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eceef1",
+                        "secondary-container": "#e6e2de",
+                        "primary": "#0058a7",
+                        "outline": "#717784",
+                        "on-tertiary-fixed": "#331100",
+                        "on-secondary-fixed-variant": "#484744",
+                        "on-primary-container": "#f3f5ff",
+                        "surface": "#f7f9fc",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-tint": "#005eb2",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fc",
+                        "on-secondary-container": "#666461",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-bright": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-container": "#0070d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar Header -->
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-xl shadow-slate-900/5 h-16">
+<div class="flex justify-between items-center w-full px-8 h-16 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4"><img alt="MOME Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uitRk_2mfPoun0nk3eF41Wt-BeK2hBHg2Q8FBBRPu5kJVIUzDMXtGeGTU62fErlrHmw8DXRDhCwni7mm717GnCE8UZ4WyR9Tc_an-wUK9Y7Hp0Hqd5GS5M8F6Pojdaj1Eo9Ev0HAaeuSHyngEtNVbVqTsNk4Rs8QRArDNfQXEEiceaZjP-jwOpZBLm38uWFLZdut2-6FY4rzfNjkp0iHtArNfeH90GbRtGZLkppoQMevkacLZcd1Pr2twWXsaWU7FWHOZn7aSYg" style=""></div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">My Projects</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 font-bold pb-1 transition-all duration-200" href="#" style="">New Application</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">Help</a>
+</nav>
+<div class="flex items-center gap-4"><img alt="MOME Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uitRk_2mfPoun0nk3eF41Wt-BeK2hBHg2Q8FBBRPu5kJVIUzDMXtGeGTU62fErlrHmw8DXRDhCwni7mm717GnCE8UZ4WyR9Tc_an-wUK9Y7Hp0Hqd5GS5M8F6Pojdaj1Eo9Ev0HAaeuSHyngEtNVbVqTsNk4Rs8QRArDNfQXEEiceaZjP-jwOpZBLm38uWFLZdut2-6FY4rzfNjkp0iHtArNfeH90GbRtGZLkppoQMevkacLZcd1Pr2twWXsaWU7FWHOZn7aSYg" style=""></div>
+</div>
+</header>
+<main class="pt-24 pb-20 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Progress Bar -->
+<div class="mb-12">
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center gap-2 group">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check" style="font-variation-settings: &quot;wght&quot; 700;">check</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-wider text-outline" style="">Production Info</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check" style="font-variation-settings: &quot;wght&quot; 700;">check</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-wider text-outline" style="">Location Details</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-sm" data-icon="check" style="font-variation-settings: &quot;wght&quot; 700;">check</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-wider text-outline" style="">Cast &amp; Crew</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container border-2 border-primary flex items-center justify-center text-primary">
+<span class="text-xs font-bold" style="">4</span>
+</div>
+<span class="text-xs font-semibold uppercase tracking-wider text-primary" style="">Summary</span>
+</div>
+</div>
+</div>
+<!-- Main Content Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl shadow-slate-900/5 p-8 md:p-12">
+<h1 class="text-3xl font-headline font-bold text-on-surface mb-4" style="">Based on Your Answers, Here's What You'll Need</h1>
+<!-- Info Banner -->
+<div class="bg-primary-container/30 border-l-4 border-primary p-4 rounded mb-10 flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="info" style="">info</span>
+<p class="text-on-surface-variant text-sm font-medium" style="">The system has identified the following permits and agency reviews required for your production.</p>
+</div>
+<!-- Bento-style FlexCard Summary Results -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+<!-- MOME Filming Permit -->
+<div class="bg-surface p-6 rounded-lg flex gap-4 transition-all hover:bg-surface-container duration-300">
+<div class="bg-white p-3 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="movie" style="">movie</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg" style="">MOME Filming Permit</h3>
+<p class="text-xs text-outline mb-2" style="">Agency: NYC Mayor's Office</p>
+<div class="inline-flex items-center px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold text-on-surface-variant" style="">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="schedule" style="">schedule</span>
+                            48H PROCESSING
+                        </div>
+</div>
+</div>
+<!-- Parks Filming Permit -->
+<div class="bg-surface p-6 rounded-lg flex gap-4 transition-all hover:bg-surface-container duration-300">
+<div class="bg-white p-3 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="park" style="">park</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg" style="">Parks Filming Permit</h3>
+<p class="text-xs text-outline mb-2" style="">Agency: NYC Parks &amp; Recreation</p>
+<div class="inline-flex items-center px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold text-on-surface-variant" style="">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="schedule" style="">schedule</span>
+                            5-7 DAYS PROCESSING
+                        </div>
+</div>
+</div>
+<!-- Traffic Coordination -->
+<div class="bg-surface p-6 rounded-lg flex gap-4 transition-all hover:bg-surface-container duration-300">
+<div class="bg-white p-3 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="traffic" style="">traffic</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg" style="">Traffic Coordination</h3>
+<p class="text-xs text-outline mb-2" style="">Agency: Department of Transportation</p>
+<div class="inline-flex items-center px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold text-on-surface-variant" style="">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="schedule" style="">schedule</span>
+                            REVIEW PENDING
+                        </div>
+</div>
+</div>
+<!-- Drone Authorization -->
+<div class="bg-surface p-6 rounded-lg flex gap-4 transition-all hover:bg-surface-container duration-300">
+<div class="bg-white p-3 rounded-xl shadow-sm h-fit">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="flight" style="">flight</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg" style="">Drone Authorization</h3>
+<p class="text-xs text-outline mb-2" style="">Agency: NYPD / FAA Review</p>
+<div class="inline-flex items-center px-2 py-1 bg-surface-container-high rounded text-[10px] font-bold text-on-surface-variant" style="">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="schedule" style="">schedule</span>
+                            14 DAYS PROCESSING
+                        </div>
+</div>
+</div>
+<!-- Port Authority Warning -->
+<div class="col-span-1 md:col-span-2 bg-tertiary-fixed/40 p-6 rounded-lg border border-tertiary-container/20 flex gap-4 items-center">
+<div class="bg-tertiary-fixed p-3 rounded-xl h-fit">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" data-icon="warning" style="font-variation-settings: &quot;FILL&quot; 1;">warning</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-lg text-on-tertiary-fixed" style="">Port Authority Clearance</h3>
+<p class="text-sm text-on-tertiary-fixed-variant" style="">Sensitive location identified. Special clearance required for George Washington Bridge perimeter filming.</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-tertiary uppercase tracking-widest" style="">Action Required</span>
+</div>
+</div>
+</div>
+<!-- Fee Estimate Section -->
+<div class="bg-surface-container-low p-8 rounded-xl mb-10 border border-outline-variant/30">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="payments" style="">payments</span>
+<h2 class="text-xl font-headline font-bold" style="">Fee Estimate</h2>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant" style="">MOME Permit Fee</span>
+<span class="font-semibold" style="">$500.00</span>
+</div>
+<div class="flex justify-between items-center text-sm border-b border-outline-variant pb-4">
+<span class="text-on-surface-variant" style="">Crew Tier (10-25 members)</span>
+<span class="font-semibold" style="">Standard</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="text-lg font-bold" style="">Estimated Total</span>
+<span class="text-2xl font-black text-primary" style="">$500.00</span>
+</div>
+</div>
+</div>
+<!-- Acknowledgment Checkbox -->
+<label class="flex items-start gap-4 mb-12 cursor-pointer group" style="">
+<input class="mt-1 h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-2 transition-all" type="checkbox">
+<span class="text-sm text-on-surface-variant leading-relaxed select-none group-hover:text-on-surface" style="">
+                    I understand which permits are required and want to proceed to the full application. I acknowledge that the estimated fees are subject to final review by MOME agents based on the final scope of the production.
+                </span>
+</label>
+<!-- Action Buttons -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<button class="w-full md:w-auto px-10 py-4 text-primary border border-outline-variant rounded font-bold uppercase tracking-wider text-xs hover:bg-primary/5 transition-all active:scale-95 duration-100" style="">
+                    Previous
+                </button>
+<button class="w-full md:w-auto px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded font-bold uppercase tracking-wider text-xs shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95 duration-100" style="">
+                    Proceed to Full Application
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black w-full py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 border-t border-slate-800 pt-8 max-w-screen-2xl mx-auto">
+<div class="mb-4 md:mb-0">
+<span class="font-bold text-white uppercase tracking-tight" style=""></span>
+</div>
+<div class="flex gap-8 mb-4 md:mb-0">
+<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#" style="">NYC.gov</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#" style="">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white transition-colors text-sm" href="#" style="">Terms of Use</a>
+</div>
+<div>
+<p class="text-slate-400 text-xs" style="">© 2024 City of New York. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

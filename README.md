@@ -12,3 +12,5 @@ This repository contains the design prototypes for the MOME (Ministry of Mines a
 - **Amend Permit**: Form/workflow to amend permits.
 - **Fee Payment Page**: Payment gateway/checkout page mockup.
 - **Help Center**: FAQs and support desk portal.
+
+# MOME

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Final Review - MOME Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#717784",
+                    "tertiary-container": "#b85203",
+                    "primary": "#0058a7",
+                    "surface-tint": "#005eb2",
+                    "on-error": "#ffffff",
+                    "surface-container": "#eceef1",
+                    "surface-variant": "#e0e3e6",
+                    "on-primary-container": "#f3f5ff",
+                    "surface-dim": "#d8dadd",
+                    "surface-container-highest": "#e0e3e6",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed": "#001b3b",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#484744",
+                    "error-container": "#ffdad6",
+                    "background": "#f7f9fc",
+                    "secondary-fixed": "#e6e2de",
+                    "on-secondary-fixed": "#1c1b19",
+                    "primary-fixed": "#d5e3ff",
+                    "secondary": "#605e5b",
+                    "on-tertiary-container": "#fff3ee",
+                    "surface": "#f7f9fc",
+                    "secondary-container": "#e6e2de",
+                    "on-primary-fixed-variant": "#004788",
+                    "error": "#ba1a1a",
+                    "primary-container": "#0070d2",
+                    "outline-variant": "#c1c6d5",
+                    "on-surface-variant": "#414753",
+                    "tertiary": "#923f00",
+                    "inverse-primary": "#a7c8ff",
+                    "on-surface": "#191c1e",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-tertiary-fixed": "#331100",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e6e8eb",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-bright": "#f7f9fc",
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "on-secondary-container": "#666461",
+                    "on-tertiary-fixed-variant": "#773200",
+                    "tertiary-fixed-dim": "#ffb68f",
+                    "surface-container-low": "#f2f4f7",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eff1f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .display-lg { font-family: 'Public Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center gap-8">
+<img alt="MOME Logo" class="w-auto h-16" src="https://lh3.googleusercontent.com/aida/ADBb0uhu6h14eLDUPoB0Sub7HLc87pheamPgellNCbETHL5L4S8qJ5AqLBTHFNvgUtqMLCYWfvwtwdBLQp9RnmlEfc8UiAfnMj7e7w8KXyy4WFbxBaUe_NHrDCf6jdWtHTfEN1fviY4VR-T3WrRCmVWrdUT5f9cCXXSsq_z42-gWERgCyYy95p5YofWRcOw8PFzxhm88jbm28mTnS5RXWM6POvkLXHU1EbJA0JRaVKuho4BkyCD13BeQhJbQAUC0V4Dn2sJQcXHyMOmCPg" style=""/>
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">My Projects</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-semibold text-base" href="#" style="">New Application</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-base" href="#" style="">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant transition-all duration-200 rounded-full" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant transition-all duration-200 rounded-full" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant">
+<img alt="User profile" class="" data-alt="professional portrait of a creative director in a minimalist studio setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdEthynCpNKIuSJeVPlcIOBvund5Dwi16qD7_hJLgxs8ofYqTY-SQtCxXgjeEhcSDkHzXcgIESEY6_iyXeayu3SE5Jz-myEw13uD4F4ktyf4uEP4Elz2nAYnPWpMMo1zDUvt3NYeVeaXKPAOyQKybrQFpsrx-7jZEZ4v3RmKo2Y5_YtlYS59gIDqcrIo0DRdPJBsPfmsYEWesG8onLpAoH8ngu4efCRD8d56ma_wpbQh48LnVxVnFirv5NEecKufgaU-NaumnBzjg" style=""/>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-12 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Progress Bar -->
+<div class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-1 flex items-center">
+<div class="flex items-center justify-center w-8 h-8 bg-primary rounded-full text-white shadow-sm">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<div class="flex-1 h-0.5 bg-primary mx-2"></div>
+</div>
+<div class="flex-shrink-0">
+<div class="flex items-center justify-center w-10 h-10 bg-primary ring-4 ring-primary-fixed text-white font-bold rounded-full" style="">
+                        7
+                    </div>
+</div>
+</div>
+<div class="flex justify-between text-[0.65rem] md:text-xs font-semibold text-outline tracking-wider">
+<span class="w-8 text-center text-primary-container" style="">PROFILE</span>
+<span class="w-8 text-center text-primary-container" style="">PROD INFO</span>
+<span class="w-8 text-center text-primary-container" style="">COMPANY</span>
+<span class="w-8 text-center text-primary-container" style="">CONTACT</span>
+<span class="w-8 text-center text-primary-container" style="">INSURANCE</span>
+<span class="w-8 text-center text-primary-container" style="">DOCS</span>
+<span class="w-10 text-center text-primary font-extrabold uppercase" style="">REVIEW</span>
+</div>
+</div>
+<header class="mb-10 text-center md:text-left">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-2" style="">Final Review</h1>
+<p class="text-on-surface-variant text-lg" style="">Please carefully review your application details before submission.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Review Sections -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Collapsible Summary Card: Project Profile -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">movie</span>
+<h3 class="font-bold text-lg" style="">Project Profile</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Project Name</p>
+<p class="font-semibold text-on-surface" style="">The Brooklyn Noir</p>
+</div>
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Project Type</p>
+<p class="font-semibold text-on-surface" style="">Feature Film</p>
+</div>
+</div>
+</div>
+<!-- Collapsible Summary Card: Production Information -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">videocam</span>
+<h3 class="font-bold text-lg" style="">Production Information</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Start Date</p>
+<p class="font-semibold text-on-surface" style="">Dec 15, 2024</p>
+</div>
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">End Date</p>
+<p class="font-semibold text-on-surface" style="">Jan 20, 2025</p>
+</div>
+<div class="col-span-2">
+<p class="text-on-surface-variant mb-1 font-medium" style="">Location Details</p>
+<p class="font-semibold text-on-surface" style="">DUMBO, Brooklyn Bridge Park, Waterfront</p>
+</div>
+</div>
+</div>
+<!-- Collapsible Summary Card: Company Information -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">business</span>
+<h3 class="font-bold text-lg" style="">Company Information</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 text-sm">
+<p class="font-semibold text-on-surface text-base mb-1" style="">Hudson River Productions, LLC</p>
+<p class="text-on-surface-variant" style="">123 Broadway, 14th Floor, New York, NY 10012</p>
+</div>
+</div>
+<!-- Collapsible Summary Card: Contact Information -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">person</span>
+<h3 class="font-bold text-lg" style="">Contact Information</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 grid grid-cols-2 gap-4 text-sm">
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Primary Contact</p>
+<p class="font-semibold text-on-surface" style="">Elena Rodriguez</p>
+<p class="text-on-surface-variant" style="">Production Manager</p>
+</div>
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Contact Phone</p>
+<p class="font-semibold text-on-surface" style="">(212) 555-0198</p>
+</div>
+</div>
+</div>
+<!-- Collapsible Summary Card: Insurance -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">verified_user</span>
+<h3 class="font-bold text-lg" style="">Insurance</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 flex items-center justify-between text-sm">
+<div>
+<p class="text-on-surface-variant mb-1 font-medium" style="">Policy Provider</p>
+<p class="font-semibold text-on-surface" style="">Empire Shield Insurance Group</p>
+</div>
+<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="">
+                            Verified
+                        </div>
+</div>
+</div>
+<!-- Collapsible Summary Card: Documents -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden group">
+<div class="p-6 flex items-center justify-between border-b border-surface-variant/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="">description</span>
+<h3 class="font-bold text-lg" style="">Documents</h3>
+</div>
+<a class="text-primary hover:underline text-sm font-semibold flex items-center gap-1" href="#" style="">
+                            Edit <span class="material-symbols-outlined text-xs" style="">edit</span>
+</a>
+</div>
+<div class="p-6 space-y-3">
+<div class="flex items-center gap-3 p-3 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary" style="">picture_as_pdf</span>
+<span class="text-sm font-semibold" style="">Location_Agreement_Park.pdf</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-primary" style="">picture_as_pdf</span>
+<span class="text-sm font-semibold" style="">Safety_Procedures_V2.pdf</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Summary -->
+<div class="space-y-6">
+<!-- Fee Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xl shadow-primary/5">
+<div class="bg-primary p-6 text-white">
+<p class="text-sm font-semibold text-primary-fixed uppercase tracking-widest opacity-80 mb-1" style="">Fee Summary</p>
+<div class="flex justify-between items-end">
+<h3 class="text-3xl font-bold" style="">$300.00</h3>
+<span class="text-sm" style="">Total Fee</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant font-medium" style="">MOME Permit Fee</span>
+<span class="font-bold text-on-surface" style="">$500.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant font-medium" style="">Processing Discount</span>
+<span class="font-bold text-error" style="">-$200.00</span>
+</div>
+<div class="pt-4 border-t border-surface-variant/50 flex justify-between items-center">
+<span class="text-base font-bold text-on-surface" style="">Calculated Total</span>
+<span class="text-2xl font-black text-primary" style="">$300.00</span>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4">
+<h4 class="font-bold text-sm uppercase tracking-wider text-outline" style="">Certifications</h4>
+<label class="flex gap-3 cursor-pointer group" style="">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<span class="text-sm leading-relaxed text-on-surface-variant group-hover:text-on-surface" style="">I certify that all information provided is true and accurate to the best of my knowledge.</span>
+</label>
+<label class="flex gap-3 cursor-pointer group" style="">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<span class="text-sm leading-relaxed text-on-surface-variant group-hover:text-on-surface" style="">I agree to the <a class="text-primary font-bold" href="#" style="">MOME Terms of Use</a> and acknowledge film permit ordinances.</span>
+</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-5 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary/20 active:scale-95 transition-all duration-200" style="">
+                    Submit Application
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 mt-12 py-12">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<span class="font-bold text-slate-900 text-xl" style=""><br/></span>
+<p class="text-slate-600 text-sm" style="">© 2024 City of New York. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-600 hover:text-blue-500 transition-colors text-sm font-semibold" href="#" style="">Privacy Policy</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors text-sm font-semibold" href="#" style="">Terms of Use</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors text-sm font-semibold" href="#" style="">NYC.gov</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors text-sm font-semibold" href="#" style="">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

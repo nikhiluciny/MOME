@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1c1b19",
+                        "surface-container-high": "#e6e8eb",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadd",
+                        "on-primary-fixed-variant": "#004788",
+                        "on-surface-variant": "#414753",
+                        "tertiary-container": "#b85203",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#e6e2de",
+                        "secondary": "#605e5b",
+                        "inverse-primary": "#a7c8ff",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary": "#923f00",
+                        "on-tertiary-container": "#fff3ee",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eceef1",
+                        "secondary-container": "#e6e2de",
+                        "primary": "#0058a7",
+                        "outline": "#717784",
+                        "on-tertiary-fixed": "#331100",
+                        "on-secondary-fixed-variant": "#484744",
+                        "on-primary-container": "#f3f5ff",
+                        "surface": "#f7f9fc",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-tint": "#005eb2",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fc",
+                        "on-secondary-container": "#666461",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-on-surface": "#eff1f4",
+                        "surface-bright": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-container": "#0070d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(0, 71, 136, 0.9);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-xl shadow-slate-900/5 h-32">
+<div class="flex justify-between items-center w-full px-8 h-32 max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-slate-900 dark:text-white font-headline"><img alt="MOME Logo" class="h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uitRk_2mfPoun0nk3eF41Wt-BeK2hBHg2Q8FBBRPu5kJVIUzDMXtGeGTU62fErlrHmw8DXRDhCwni7mm717GnCE8UZ4WyR9Tc_an-wUK9Y7Hp0Hqd5GS5M8F6Pojdaj1Eo9Ev0HAaeuSHyngEtNVbVqTsNk4Rs8QRArDNfQXEEiceaZjP-jwOpZBLm38uWFLZdut2-6FY4rzfNjkp0iHtArNfeH90GbRtGZLkppoQMevkacLZcd1Pr2twWXsaWU7FWHOZn7aSYg" style=""/></div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200 text-lg" href="#" style="">Home</a>
+<a class="dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200 text-lg" href="#" style="">My Projects</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 font-bold pb-1 transition-all duration-200 text-lg" href="#" style="">New Application</a>
+<a class="dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200 text-lg" href="#" style="">Help</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:opacity-80 transition-all duration-200" style="">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-40 pb-12 px-6 max-w-4xl mx-auto min-h-screen">
+<!-- Progress Bar Section -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative">
+<!-- Progress Line Background -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container-high -translate-y-1/2 z-0"></div>
+<!-- Progress Line Active -->
+<div class="absolute top-1/2 left-0 w-2/3 h-1 bg-primary -translate-y-1/2 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white ring-4 ring-surface">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<span class="mt-2 text-[0.7rem] font-semibold text-on-surface-variant font-label" style="">Contact Info</span>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white ring-4 ring-surface">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check</span>
+</div>
+<span class="mt-2 text-[0.7rem] font-semibold text-on-surface-variant font-label" style="">Shoot Dates</span>
+</div>
+<!-- Step 3 (Active) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container ring-4 ring-primary flex items-center justify-center text-on-primary-container">
+<span class="text-sm font-bold" style="">3</span>
+</div>
+<span class="mt-2 text-[0.7rem] font-bold text-primary font-label" style="">Activities</span>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high ring-4 ring-surface flex items-center justify-center text-outline">
+<span class="text-sm font-bold" style="">4</span>
+</div>
+<span class="mt-2 text-[0.7rem] font-semibold text-outline font-label" style="">Final Review</span>
+</div>
+</div>
+</div>
+<!-- Main Card Content -->
+<section class="bg-surface-container-lowest rounded-lg shadow-xl shadow-slate-900/5 p-8 md:p-12 border-none">
+<div class="mb-8">
+<h1 class="text-2xl md:text-3xl font-bold font-headline text-on-surface leading-tight tracking-tight" style="">
+                    What Activities and Equipment Are Involved?
+                </h1>
+<p class="mt-3 text-on-surface-variant text-base leading-relaxed" style="">
+                    These details determine additional agency approvals and safety requirements. Accurate disclosure ensures your permit processing is not delayed.
+                </p>
+</div>
+<form class="space-y-10">
+<!-- Special Activities Multi-select -->
+<fieldset>
+<legend class="block text-xs font-semibold text-on-surface-variant font-label uppercase tracking-wider mb-4" style="">
+                        Special Activities
+                    </legend>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Drone</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Pyrotechnics</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Stunts</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Simulated Weapons</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Animals</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Traffic Coordination</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Nighttime Filming</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Amplified Sound</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface font-bold" style="">None</span>
+</label>
+</div>
+</fieldset>
+<!-- Heavy Equipment Multi-select -->
+<fieldset>
+<legend class="block text-xs font-semibold text-on-surface-variant font-label uppercase tracking-wider mb-4" style="">
+                        Heavy Equipment
+                    </legend>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Generators</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Cranes</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Production Vehicles</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface" style="">Lighting Rigs</span>
+</label>
+<label class="flex items-center p-4 rounded-lg bg-surface-container-low border-none cursor-pointer hover:bg-surface-container-high transition-colors" style="">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="ml-3 text-sm font-medium text-on-surface font-bold" style="">None</span>
+</label>
+</div>
+</fieldset>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Shoot Timing Radio -->
+<fieldset>
+<legend class="block text-xs font-semibold text-on-surface-variant font-label uppercase tracking-wider mb-4" style="">
+                            Shoot Timing
+                        </legend>
+<div class="space-y-3">
+<label class="flex items-center group cursor-pointer" style="">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary/20" name="timing" type="radio"/>
+<span class="ml-3 text-sm font-medium text-on-surface group-hover:text-primary transition-colors" style="">Day Only</span>
+</label>
+<label class="flex items-center group cursor-pointer" style="">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary/20" name="timing" type="radio"/>
+<span class="ml-3 text-sm font-medium text-on-surface group-hover:text-primary transition-colors" style="">Night Only</span>
+</label>
+<label class="flex items-center group cursor-pointer" style="">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary/20" name="timing" type="radio"/>
+<span class="ml-3 text-sm font-medium text-on-surface group-hover:text-primary transition-colors" style="">Both Day and Night</span>
+</label>
+</div>
+</fieldset>
+<!-- Additional Notes -->
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant font-label uppercase tracking-wider mb-4" for="notes" style="">
+                            Additional notes (optional)
+                        </label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg text-sm text-on-surface focus:ring-2 focus:ring-primary/20 placeholder:text-outline transition-all" id="notes" placeholder="Enter any specific technical requirements or location concerns..." rows="4"></textarea>
+</div>
+</div>
+<!-- Form Navigation Actions -->
+<div class="pt-10 flex items-center justify-between">
+<button class="px-8 py-3 rounded text-sm font-bold text-primary bg-transparent outline-none ring-1 ring-outline-variant/20 hover:bg-surface-container-high active:scale-95 duration-100 transition-all font-label" style="" type="button">
+                        Previous
+                    </button>
+<button class="px-10 py-3 rounded text-sm font-bold text-white bg-gradient-to-r from-primary to-primary-container shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 duration-100 transition-all font-label" style="" type="submit">
+                        Next
+                    </button>
+</div>
+</form>
+</section>
+<!-- Informational Side Note (Asymmetric Editorial Style) -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="p-6 bg-secondary-container rounded-xl">
+<div class="flex items-center gap-3 mb-3 text-on-secondary-container">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>info</span>
+<span class="font-bold text-sm font-headline" style="">Safety First</span>
+</div>
+<p class="text-sm text-on-secondary-container/80 leading-relaxed" style="">
+                    Production equipment on NYC streets must comply with DOB and FDNY safety codes. If selecting 'Pyrotechnics' or 'Stunts', a separate onsite inspection will be scheduled by the Film Office.
+                </p>
+</div>
+<div class="h-full hidden md:block">
+<img alt="A professional film set in NYC street with high-end camera equipment and crew working under soft morning light" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="high-end professional film set on a New York City cobblestone street at blue hour with large lighting rigs and crew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyD21nkijXAv6mx84xFgMHDGPkKt0tarjEH0vhrXp0Ojg7pKJeUmDY3nF0QJ_feqeley-aEpjtZ4B3WmUeXzaZaHe4eX1mtBgU2KDi5gOspKyuqQ0jD7qwP6NWiO8S5TBxYYJX-msCllp0fCS5UGT5aQcyNhhr4VoKEvfX8lWQD6KdNsZdA-EZjbumRM7OQW8PS40L1XIxWoea9YlEiYFQT0a1gQT-Gw2HGOmTein_Ey9sJy8tLtpMSsOTzy8eBk--ymz2_ztDV5E" style=""/>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-slate-900 dark:bg-black mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 border-t border-slate-800 pt-8 max-w-screen-2xl mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="font-bold text-white font-headline" style=""></span>
+<span class="ml-2 text-slate-400 text-sm font-body" style="">Mayor's Office of Media &amp; Entertainment</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label" href="#" style="">NYC.gov</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label" href="#" style="">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white transition-colors text-xs font-label" href="#" style="">Terms of Use</a>
+</div>
+<p class="text-slate-400 text-[0.65rem] font-body" style="">
+                © 2024 City of New York. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MOME | NYC Film Permit Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d5e3ff",
+                        "surface-dim": "#d8dadd",
+                        "on-secondary-fixed-variant": "#484744",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eceef1",
+                        "primary-container": "#0070d2",
+                        "tertiary": "#923f00",
+                        "outline": "#717784",
+                        "inverse-on-surface": "#eff1f4",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c1c6d5",
+                        "surface-tint": "#005eb2",
+                        "tertiary-container": "#b85203",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "on-background": "#191c1e",
+                        "error": "#ba1a1a",
+                        "secondary": "#605e5b",
+                        "surface": "#f7f9fc",
+                        "secondary-fixed": "#e6e2de",
+                        "inverse-primary": "#a7c8ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#331100",
+                        "primary": "#0058a7",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#414753",
+                        "surface-variant": "#e0e3e6",
+                        "background": "#f7f9fc",
+                        "surface-bright": "#f7f9fc",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-secondary-fixed": "#1c1b19",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#fff3ee",
+                        "on-primary-container": "#f3f5ff",
+                        "on-secondary-container": "#666461",
+                        "on-primary-fixed": "#001b3b",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8eb",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "secondary-container": "#e6e2de",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#004788"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 bg-white border-b border-slate-200 shadow-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center h-full">
+<img alt="MOME Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugKGSgc2b_855yhySnMyjD46UDCd31ra5S0X57DaAI84IKuoyaEtjuFH_1drUCvNgj57N2QyudmoJNPFJYxzMicQFKU5CNsPyG3tBMQSg6WemwW43LBbam5Ph58lYIWlvKVoTjTlpHx8PygW6Hzxl7qP_Hzc1t_MXHqpTiRUbr4I3r1n7MclpihjJB2Vdo_BnxUXpEy2zZaSfQ20FEjPW7tAqq46cHDzKaw0c-X8BmQGlFEFGQFQmJoKiW5ctCgUZGG7g4x5OhFFQ"/>
+</div>
+<div class="hidden md:flex items-center gap-8 ml-8">
+<a class="font-semibold text-primary border-b-2 border-primary pb-1 text-lg" href="#">Home</a>
+<a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg" href="#">My Projects</a>
+<a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg" href="#">New Application</a>
+<a class="font-semibold hover:text-primary transition-colors text-slate-700 text-lg" href="#">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/10 rounded-full transition-all duration-200">
+<span class="material-symbols-outlined text-slate-700">search</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden cursor-pointer hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined text-sm text-slate-700">person</span>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-16">
+<!-- Cinematic Hero Section -->
+<section class="relative h-[870px] w-full flex items-center overflow-hidden bg-on-primary-fixed-variant">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center opacity-70" data-alt="Cinematic wide shot of a bustling New York City film set at night with large production lights, cranes, and cameras overlooking the skyline" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOualaJXczjy3cgdT2PMstMOmHh1B_h8GetrWvsHX4EYT1klAZgazSHFfrQoP5ckz7geJ6ESzcOaOCvENf9mG9OdVltI_wzl1Ww7a8GXKnfI1e4-Ao502djULnnxmSqN4sfL6_RjUpZql1yWgt9coNHL0ezFqP0T5x6AUJ0zCbuhMaU0MW8suSkmBEU8HxAM1AK2oyJXkWd8O2M8Fm0nS7Kk9HBgvljYnRP81dr1waY_w5y6Hm3YkFwbfOSQKWYQg8EDw0L_wDRY8')"></div>
+</div>
+<div class="container mx-auto px-12 relative z-20">
+<div class="max-w-2xl space-y-6">
+<h1 class="text-white text-6xl md:text-7xl font-black tracking-tighter leading-none">
+                        NYC Film <br/>Permit Portal
+                    </h1>
+<p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed">
+                        Your single entry point for all NYC filming permits — apply, track, and manage your production permits online.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 rounded-lg bg-gradient-to-r from-primary to-primary-container text-white font-bold tracking-wide hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                            Start New Application
+                        </button>
+<button class="px-8 py-4 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold tracking-wide hover:bg-white/20 transition-all active:scale-95">
+                            Log In to My Projects
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Action FlexCards (Bento Style) -->
+<section class="py-24 px-8 bg-surface">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-10 bg-surface-container-lowest rounded-xl hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-72 border border-outline-variant/10">
+<div>
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">New Permit Application</h3>
+<p class="text-on-surface-variant text-sm">Start a new film permit application for any borough or specific NYC location.</p>
+</div>
+<div class="flex items-center text-primary font-bold text-sm gap-2 mt-4">
+                            Start Application <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group p-10 bg-surface-container-lowest rounded-xl hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-72 border border-outline-variant/10">
+<div>
+<div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary" data-icon="track_changes">track_changes</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Track My Applications</h3>
+<p class="text-on-surface-variant text-sm">Check the real-time status of your active permit requests and pending approvals.</p>
+</div>
+<div class="flex items-center text-primary font-bold text-sm gap-2 mt-4">
+                            Check Status <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group p-10 bg-surface-container-lowest rounded-xl hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-72 border border-outline-variant/10">
+<div>
+<div class="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary" data-icon="edit_note">edit_note</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Amend Existing Permit</h3>
+<p class="text-on-surface-variant text-sm">Modify dates, locations, or crew size for permits that have already been issued.</p>
+</div>
+<div class="flex items-center text-primary font-bold text-sm gap-2 mt-4">
+                            Modify Permit <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works (Horizontal Process Strip) -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="container mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">The Process</span>
+<h2 class="text-4xl font-black text-on-surface">How It Works</h2>
+</div>
+<div class="relative">
+<div class="absolute top-12 left-0 w-full h-[1px] bg-outline-variant/30 hidden md:block z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="assignment">assignment</span>
+</div>
+<div class="px-4">
+<h4 class="text-lg font-bold mb-2">1. Answer Intake Questions</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tell us about your production size and goals via our questionnaire.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="article">article</span>
+</div>
+<div class="px-4">
+<h4 class="text-lg font-bold mb-2">2. Complete Application</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Provide detailed location specifics, dates, and equipment lists.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="verified_user">verified_user</span>
+</div>
+<div class="px-4">
+<h4 class="text-lg font-bold mb-2">3. Upload Insurance</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Securely upload your certificate of insurance for verification.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 rounded-full bg-surface-container-lowest border-4 border-surface shadow-lg flex items-center justify-center mb-6 group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="px-4">
+<h4 class="text-lg font-bold mb-2">4. Pay &amp; Receive Permit</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Submit processing fees and download your official filming permit.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Permit Types (Tonal Grid) -->
+<section class="py-24 px-8 bg-surface">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="text-4xl font-black text-on-surface mb-4">Permit Types</h2>
+<p class="text-on-surface-variant">We support various production formats, from student films to major motion pictures. Choose the permit that matches your scale.</p>
+</div>
+<button class="px-6 py-2 rounded-lg text-primary font-bold flex items-center gap-2 border border-primary/20 hover:bg-primary-fixed/30 transition-all">
+                        Compare Types <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Standard -->
+<div class="p-8 bg-surface-container rounded-xl border-l-4 border-primary hover:translate-x-1 transition-transform">
+<div class="flex justify-between items-start mb-4">
+<h4 class="text-xl font-bold text-on-surface">Standard Filming Permit</h4>
+<span class="px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase rounded-full">Most Common</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Required for productions using equipment, specialized vehicles, or obstructing public walkways.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-primary">check</span> 48-hour typical turnaround</li>
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-primary">check</span> Location specific</li>
+</ul>
+</div>
+<!-- Episodic -->
+<div class="p-8 bg-surface-container rounded-xl border-l-4 border-secondary hover:translate-x-1 transition-transform">
+<div class="flex justify-between items-start mb-4">
+<h4 class="text-xl font-bold text-on-surface">Episodic / Long-Term Permit</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">Designed for TV series and recurring productions that require multiple recurring locations.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-secondary">check</span> Batch location processing</li>
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-secondary">check</span> Dedicated account manager</li>
+</ul>
+</div>
+<!-- Letter-in-Lieu -->
+<div class="p-8 bg-surface-container rounded-xl border-l-4 border-tertiary hover:translate-x-1 transition-transform">
+<div class="flex justify-between items-start mb-4">
+<h4 class="text-xl font-bold text-on-surface">Letter-in-Lieu / Waiver</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">For small productions that do not require parking, street closures, or heavy equipment.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-tertiary">check</span> Expedited review</li>
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-tertiary">check</span> Reduced administrative fee</li>
+</ul>
+</div>
+<!-- Amendment -->
+<div class="p-8 bg-surface-container rounded-xl border-l-4 border-outline hover:translate-x-1 transition-transform">
+<div class="flex justify-between items-start mb-4">
+<h4 class="text-xl font-bold text-on-surface">Amendment</h4>
+</div>
+<p class="text-on-surface-variant text-sm mb-6">For updating existing permits with new information or rescheduling due to weather.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-outline">check</span> Fast-track processing</li>
+<li class="flex items-center gap-2 text-xs text-on-surface-variant"><span class="material-symbols-outlined text-sm text-outline">check</span> Maintain original insurance file</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Need Help / Agentforce Section -->
+<section class="py-24 px-8 container mx-auto">
+<div class="bg-primary rounded-2xl p-12 text-on-primary flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<!-- Abstract Texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-white blur-[80px]"></div>
+<div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-white blur-[80px]"></div>
+</div>
+<div class="max-w-xl relative z-10">
+<h2 class="text-3xl font-black mb-4">Need Help?</h2>
+<p class="text-primary-fixed font-light text-lg mb-8">Access our comprehensive FAQ or chat with Agentforce—our AI assistant specifically trained on NYC filming regulations.</p>
+<div class="flex gap-4">
+<a class="px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors" href="#">Browse FAQs</a>
+<button class="px-6 py-3 border border-white/40 text-white font-bold rounded-lg hover:bg-white/10 transition-colors">Talk to Assistant</button>
+</div>
+</div>
+<div class="w-full md:w-80 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-6 relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<p class="text-xs font-bold text-white uppercase tracking-widest">Agentforce AI</p>
+<p class="text-[10px] text-white/70">Online &amp; Ready to Help</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="bg-white/10 p-3 rounded-lg text-xs text-white/90">"How do I apply for a street closure in SoHo?"</div>
+<div class="bg-white/10 p-3 rounded-lg text-xs text-white/90">"What insurance limits are required for stunts?"</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 px-8 mt-auto bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-lg font-black text-slate-900 dark:text-white">MOME</span>
+<p class="text-slate-600 dark:text-slate-400 text-xs max-w-xs">The City of New York Mayor's Office of Media and Entertainment.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[10px] uppercase tracking-widest text-slate-600 dark:text-slate-400 hover:text-sky-600 underline transition-opacity duration-150" href="#">NYC.gov</a>
+<a class="text-[10px] uppercase tracking-widest text-slate-600 dark:text-slate-400 hover:text-sky-600 underline transition-opacity duration-150" href="#">Accessibility</a>
+<a class="text-[10px] uppercase tracking-widest text-slate-600 dark:text-slate-400 hover:text-sky-600 underline transition-opacity duration-150" href="#">Contact</a>
+</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-600 dark:text-slate-400">
+                © City of New York. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

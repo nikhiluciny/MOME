@@ -1,0 +1,238 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MOME Film Portal - Smart Intake</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#1c1b19",
+                    "surface-container-high": "#e6e8eb",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadd",
+                    "on-primary-fixed-variant": "#004788",
+                    "on-surface-variant": "#414753",
+                    "tertiary-container": "#b85203",
+                    "surface-variant": "#e0e3e6",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e6e2de",
+                    "secondary": "#605e5b",
+                    "inverse-primary": "#a7c8ff",
+                    "outline-variant": "#c1c6d5",
+                    "tertiary": "#923f00",
+                    "on-tertiary-container": "#fff3ee",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef1",
+                    "secondary-container": "#e6e2de",
+                    "primary": "#0058a7",
+                    "outline": "#717784",
+                    "on-tertiary-fixed": "#331100",
+                    "on-secondary-fixed-variant": "#484744",
+                    "on-primary-container": "#f3f5ff",
+                    "surface": "#f7f9fc",
+                    "surface-container-highest": "#e0e3e6",
+                    "surface-tint": "#005eb2",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "background": "#f7f9fc",
+                    "on-secondary-container": "#666461",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbca",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "inverse-on-surface": "#eff1f4",
+                    "surface-bright": "#f7f9fc",
+                    "surface-container-low": "#f2f4f7",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb68f",
+                    "on-tertiary-fixed-variant": "#773200",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#001b3b",
+                    "primary-fixed": "#d5e3ff",
+                    "primary-container": "#0070d2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Public Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .cinematic-shadow {
+            box-shadow: 0 24px 40px -12px rgba(25, 28, 30, 0.04);
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #0058a7 0%, #0070d2 100%);
+        }
+        .cta-gradient:active {
+            background: #004788;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 glass-header shadow-xl shadow-slate-900/5 h-16">
+<div class="flex justify-between items-center w-full px-8 h-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<img alt="MOME Film Portal" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uitRk_2mfPoun0nk3eF41Wt-BeK2hBHg2Q8FBBRPu5kJVIUzDMXtGeGTU62fErlrHmw8DXRDhCwni7mm717GnCE8UZ4WyR9Tc_an-wUK9Y7Hp0Hqd5GS5M8F6Pojdaj1Eo9Ev0HAaeuSHyngEtNVbVqTsNk4Rs8QRArDNfQXEEiceaZjP-jwOpZBLm38uWFLZdut2-6FY4rzfNjkp0iHtArNfeH90GbRtGZLkppoQMevkacLZcd1Pr2twWXsaWU7FWHOZn7aSYg" style="">
+<div class="hidden md:flex gap-6">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">My Projects</a>
+<a class="text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 font-bold pb-1 transition-all duration-200" href="#" style="">New Application</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-all duration-200" href="#" style="">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:opacity-80 cursor-pointer" style="">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-16 px-4 md:px-8 max-w-4xl mx-auto w-full">
+<!-- Horizontal Progress Bar -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative">
+<!-- Connector Line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-high -z-10 -translate-y-1/2"></div>
+<!-- Step 1 (Active) -->
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm ring-4 ring-surface" style="">1</div>
+<span class="text-xs font-semibold text-primary font-label" style="">Step 1</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-sm ring-4 ring-surface" style="">2</div>
+<span class="text-xs font-medium text-on-surface-variant font-label" style="">Step 2</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-sm ring-4 ring-surface" style="">3</div>
+<span class="text-xs font-medium text-on-surface-variant font-label" style="">Step 3</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold text-sm ring-4 ring-surface" style="">4</div>
+<span class="text-xs font-medium text-on-surface-variant font-label" style="">Step 4</span>
+</div>
+</div>
+</div>
+<!-- Application Card -->
+<section class="bg-surface-container-lowest cinematic-shadow p-8 md:p-12 border-none">
+<header class="mb-10">
+<h1 class="font-headline text-2xl font-bold text-on-surface mb-2" style="">Tell Us About Your Project</h1>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-2xl" style="">This information helps us determine which permits and agencies are required for your production.</p>
+</header>
+<form class="grid grid-cols-12 gap-x-6 gap-y-8">
+<!-- Project Title -->
+<div class="col-span-12">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Project Title</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface placeholder:text-outline transition-all" placeholder="Enter the official title of your production" type="text">
+</div>
+<!-- Project Origin -->
+<div class="col-span-12 md:col-span-6">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Project Origin</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all appearance-none">
+<option disabled="" selected="" value="">Select Origin</option>
+<option>Domestic</option>
+<option>International</option>
+</select>
+</div>
+<!-- Project Category -->
+<div class="col-span-12 md:col-span-6">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Project Category</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all appearance-none">
+<option disabled="" selected="" value="">Select Category</option>
+<option>Feature Film</option>
+<option>TV Series</option>
+<option>Commercial</option>
+<option>Still Photography</option>
+<option>Music Video</option>
+</select>
+</div>
+<!-- Project Subcategory -->
+<div class="col-span-12 md:col-span-6">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Project Subcategory</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all appearance-none">
+<option disabled="" selected="" value="">Select Subcategory</option>
+<option>Narrative</option>
+<option>Documentary</option>
+<option>Student Film</option>
+<option>New Media</option>
+</select>
+</div>
+<!-- Estimated Crew Size -->
+<div class="col-span-12 md:col-span-6">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Estimated Crew Size</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all" placeholder="Total personnel on site" type="number">
+</div>
+<!-- Production Company Name -->
+<div class="col-span-12">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Production Company Name</label>
+<input class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all" placeholder="Legal entity responsible for production" type="text">
+</div>
+<!-- Brief Description -->
+<div class="col-span-12">
+<label class="block text-xs font-semibold text-on-surface-variant mb-2 font-label" style="">Brief Description of Production</label>
+<textarea class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-1 focus:ring-primary/20 rounded-lg p-3 text-on-surface transition-all" placeholder="Briefly describe the nature of your shoot, including key locations or specific needs." rows="4"></textarea>
+</div>
+<!-- Actions -->
+<div class="col-span-12 flex justify-end mt-4">
+<button class="cta-gradient text-on-primary font-bold px-8 py-3 rounded-lg flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20" type="button" style="">
+                        Next
+                        <span class="material-symbols-outlined text-base" style="">arrow_forward</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Informational Sidekick -->
+<div class="mt-8 flex items-start gap-4 p-6 bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="">info</span>
+<div class="text-sm">
+<h4 class="font-bold text-on-surface mb-1 font-headline" style="">Need Assistance?</h4>
+<p class="text-on-surface-variant leading-normal" style="">Our team is available to help clarify requirements. Contact the MOME Film Office at <a class="text-primary hover:underline" href="#" style="">212-489-6710</a> for immediate permit inquiries.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-black w-full py-12 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 border-t border-slate-800 pt-8 max-w-screen-2xl mx-auto w-full">
+<div class="flex flex-col gap-2 mb-6 md:mb-0">
+<span class="font-bold text-white font-headline" style=""><br></span>
+<p class="text-slate-400 text-xs font-label" style="">© 2024 City of New York. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-white text-sm transition-colors font-body" href="#" style="">NYC.gov</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors font-body" href="#" style="">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white text-sm transition-colors font-body" href="#" style="">Terms of Use</a>
+</div>
+</div>
+</footer>
+</body></html>

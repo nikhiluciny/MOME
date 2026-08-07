@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review Amendment Request | MOME Permit Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#0070d2",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#414753",
+                        "surface-tint": "#005eb2",
+                        "on-tertiary-container": "#fff3ee",
+                        "on-surface": "#191c1e",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "primary-fixed": "#d5e3ff",
+                        "on-background": "#191c1e",
+                        "surface-dim": "#d8dadd",
+                        "surface-bright": "#f7f9fc",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-primary-fixed-variant": "#004788",
+                        "outline-variant": "#c1c6d5",
+                        "on-primary-fixed": "#001b3b",
+                        "surface-container": "#eceef1",
+                        "outline": "#717784",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#331100",
+                        "on-secondary-fixed": "#1c1b19",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "secondary": "#605e5b",
+                        "background": "#f7f9fc",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "inverse-on-surface": "#eff1f4",
+                        "secondary-container": "#e6e2de",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#484744",
+                        "tertiary-container": "#b85203",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#666461",
+                        "secondary-fixed": "#e6e2de",
+                        "tertiary": "#923f00",
+                        "primary": "#0058a7",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-container-high": "#e6e8eb",
+                        "on-primary-container": "#f3f5ff",
+                        "surface-variant": "#e0e3e6",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "tertiary-fixed": "#ffdbca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white shadow-sm flex justify-between items-center px-8 py-3 max-w-full mx-auto border-b border-surface-container-high">
+<div class="flex items-center gap-10">
+<img alt="MOME Logo" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhJJOnhSbEX9WFi33W_Zp-JKhmyOFinJe6WuVuV2RyB5mCmd6bqRVJMReXaSjYJKHFGJpxai6hOdmJCZUzimJeenBr81aJoNOahGsASFOgTkm9uHl01ua_S-aI5JqwCTmDc8mbeE40PR5c8pZiFgERkJibtIXgRThxZaeVJVTkYkBy5kiYfGy0obBJOdoopl0RxtgUPYLxEJVcfLxdmD0FAElGEJq1pmaGEW4P2NeCKvg2uWDEFZrwwGUYMJ1Mqw0yIiF_wek6LhQ" style=""/>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tight text-[#191c1e]/70 hover:text-[#0058a7] transition-all duration-300 text-base" href="#" style="">Home</a>
+<a class="font-headline font-bold tracking-tight text-[#0058a7] border-b-2 border-[#0058a7] pb-1 text-base" href="#" style="">My Projects</a>
+<a class="font-headline font-bold tracking-tight text-[#191c1e]/70 hover:text-[#0058a7] transition-all duration-300 text-base" href="#" style="">New Application</a>
+<a class="font-headline font-bold tracking-tight text-[#191c1e]/70 hover:text-[#0058a7] transition-all duration-300 text-base" href="#" style="">Help</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-all" style="">
+<span class="material-symbols-outlined text-on-surface-variant" style="">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="pt-24 pb-16 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Step Indicator -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative max-w-3xl mx-auto px-4">
+<!-- Progress Line Background -->
+<div class="absolute top-[20px] left-0 w-full h-0.5 bg-surface-container-high"></div>
+<!-- Active Progress Line (Connects Step 1 to Step 2, and half way to Step 3) -->
+<div class="absolute top-[20px] left-[15%] w-[70%] h-0.5 bg-primary"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center gap-2 z-10 w-24">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-lg" style='font-variation-settings: "wght" 700;'>check</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary font-label whitespace-nowrap" style="">Step 1</span>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center gap-2 z-10 w-24">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-lg" style='font-variation-settings: "wght" 700;'>check</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary font-label whitespace-nowrap" style="">Step 2</span>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center gap-2 z-10 w-24">
+<div class="w-10 h-10 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-lg">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary font-label whitespace-nowrap" style="">Review &amp; Submit</span>
+</div>
+</div>
+</div>
+<!-- Header Section -->
+<div class="mb-10 text-center">
+<h1 class="text-4xl md:text-5xl font-black text-on-surface font-headline tracking-tighter mb-4" style="">Review Amendment Request</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto" style="">Please carefully review the changes to your film permit below. Once submitted, our team will process the request within 24-48 business hours.</p>
+</div>
+<!-- Comparison Table Shell -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_32px_64px_-15px_rgba(0,0,0,0.05)] overflow-hidden mb-8 border border-surface-container">
+<div class="grid grid-cols-12 bg-surface-container-low py-4 px-8 border-b border-outline-variant/10">
+<div class="col-span-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label" style="">Field Name</div>
+<div class="col-span-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant font-label" style="">Current Value</div>
+<div class="col-span-4 text-[10px] font-bold uppercase tracking-widest text-primary font-label" style="">Requested Value</div>
+</div>
+<!-- Row 1: Dates -->
+<div class="grid grid-cols-12 py-6 px-8 items-center border-b border-surface-container/50">
+<div class="col-span-4">
+<span class="block font-bold text-on-surface font-headline" style="">End Date</span>
+<span class="text-xs text-on-surface-variant" style="">Permit duration extension</span>
+</div>
+<div class="col-span-4 text-on-surface-variant font-medium" style="">May 30, 2026</div>
+<div class="col-span-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">trending_up</span>
+<span class="text-primary font-bold" style="">Jun 15, 2026</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Location -->
+<div class="grid grid-cols-12 py-6 px-8 items-center border-b border-surface-container/50">
+<div class="col-span-4">
+<span class="block font-bold text-on-surface font-headline" style="">Primary Location</span>
+<span class="text-xs text-on-surface-variant" style="">Filming site address</span>
+</div>
+<div class="col-span-4 text-on-surface-variant font-medium" style="">Pier 17, Manhattan</div>
+<div class="col-span-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">edit_location</span>
+<span class="text-primary font-bold" style="">Washington Square Park</span>
+</div>
+</div>
+</div>
+<!-- Row 3: Equipment -->
+<div class="grid grid-cols-12 py-6 px-8 items-center">
+<div class="col-span-4">
+<span class="block font-bold text-on-surface font-headline" style="">Generator Count</span>
+<span class="text-xs text-on-surface-variant" style="">On-site power equipment</span>
+</div>
+<div class="col-span-4 text-on-surface-variant font-medium" style="">1 Eco-Silent Unit</div>
+<div class="col-span-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">add_circle</span>
+<span class="text-primary font-bold" style="">2 Eco-Silent Units</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fee Impact & Confirmation -->
+<div class="space-y-6">
+<!-- Fee Note Card -->
+<div class="bg-primary-fixed p-6 rounded-lg flex items-start gap-4">
+<div class="bg-on-primary-fixed-variant p-2 rounded-lg">
+<span class="material-symbols-outlined text-white" style="">payments</span>
+</div>
+<div>
+<h4 class="font-bold text-on-primary-fixed font-headline" style="">Fee Impact Note</h4>
+<p class="text-on-primary-fixed-variant text-sm mt-1 leading-relaxed" style="">The requested amendments incur a processing fee of <strong>$45.00</strong>. This will be automatically charged to your linked corporate account upon approval of the amendment.</p>
+</div>
+</div>
+<!-- Confirmation Checkbox -->
+<div class="flex items-center gap-4 p-4 border border-outline-variant/20 rounded-lg hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded border-outline-variant text-primary focus:ring-primary focus:ring-offset-2 transition-all" id="confirm" type="checkbox"/>
+</div>
+<label class="text-sm font-medium text-on-surface select-none cursor-pointer" for="confirm" style="">I confirm these amendments are accurate and authorized by the production entity.</label>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-12 pt-8 border-t border-surface-container-high flex flex-col md:flex-row justify-between items-center gap-4">
+<button class="w-full md:w-auto px-10 py-4 font-bold text-primary flex items-center justify-center gap-2 rounded-lg border-2 border-primary/20 hover:bg-primary/5 hover:border-primary/40 transition-all" style="">
+<span class="material-symbols-outlined text-base" style="">arrow_back</span>
+                Back
+            </button>
+<button class="w-full md:w-auto px-12 py-4 font-bold text-white flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary to-primary-container shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all" style="">
+                Submit Amendment
+                <span class="material-symbols-outlined text-base" style="">send</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t border-white/10 bg-[#191c1e] py-12 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-bold text-white font-headline" style=""><br/></span>
+<p class="text-white/60 font-['Inter'] text-xs font-medium uppercase tracking-widest" style="">© City of New York. 2024 All Rights Reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-white/60 font-['Inter'] text-xs font-medium uppercase tracking-widest hover:text-white transition-colors" href="#" style="">NYC.gov</a>
+<a class="text-white/60 font-['Inter'] text-xs font-medium uppercase tracking-widest hover:text-white transition-colors" href="#" style="">Privacy Policy</a>
+<a class="text-white/60 font-['Inter'] text-xs font-medium uppercase tracking-widest hover:text-white transition-colors" href="#" style="">Terms of Use</a>
+</div>
+</div>
+</footer>
+</body></html>

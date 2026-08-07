@@ -1,0 +1,181 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Public+Sans:wght@700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface-tint": "#005eb2",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary-fixed": "#ffdbca",
+                        "tertiary-container": "#b85203",
+                        "on-tertiary-container": "#fff3ee",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d8dadd",
+                        "on-secondary-fixed-variant": "#484744",
+                        "on-secondary-fixed": "#1c1b19",
+                        "on-primary-fixed-variant": "#004788",
+                        "secondary": "#605e5b",
+                        "on-secondary-container": "#666461",
+                        "primary-fixed": "#d5e3ff",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-container": "#0070d2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "on-primary-container": "#f3f5ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-variant": "#e0e3e6",
+                        "on-surface-variant": "#414753",
+                        "secondary-container": "#e6e2de",
+                        "inverse-primary": "#a7c8ff",
+                        "secondary-fixed": "#e6e2de",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary-fixed-dim": "#ffb68f",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#331100",
+                        "surface-container-high": "#e6e8eb",
+                        "surface-container": "#eceef1",
+                        "tertiary": "#923f00",
+                        "primary": "#0058a7",
+                        "background": "#f7f9fc",
+                        "inverse-surface": "#2d3133",
+                        "on-background": "#191c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#717784",
+                        "on-tertiary-fixed-variant": "#773200",
+                        "surface-bright": "#f7f9fc",
+                        "surface": "#f7f9fc",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Public Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Public Sans', sans-serif; }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface h-full flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-900/10 backdrop-blur-xl dark:bg-slate-950/20 shadow-xl shadow-slate-900/5 flex justify-between items-center px-8 py-4 max-w-full">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white" style="">MOME</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-[#0070d2] text-sm font-medium transition-colors" href="#" style="">Help</a>
+</div>
+</nav>
+<!-- Main Content Area with Cinematic Background -->
+<main class="flex-grow flex items-center justify-center relative pt-20 pb-12 px-6">
+<!-- Background Image Container -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Cinematic wide shot of a bustling New York City film set at dusk with professional lighting rigs, cameras on dollies, and yellow taxis in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByaC6-dUyWCvppDDpblzpzFXPvJBtVcCYZEM5ihcT8ih2dkYiRH9L5EIlzc8durgcIDVFfS2bkLGSeDw7A794uTQeGRZMqX-zAjrWm0DgZHcYEhCgRtujZoPSiSu_WDUfNGMmprGhYyzRtKYK1qY-TF5TTRJ-eEillPWFjaEapi2CVPZRPMCL1ZGDbHTq6cfSDqRy9p-EII0j22Sv5t6cLHLOuLdIcQzlR8x3YpNHPFyEDfZyDT5i6J_qt4Z8xIu64aztDLpT_ejc" style="">
+<div class="absolute inset-0 bg-slate-900/80 backdrop-blur-[2px]"></div>
+</div>
+<!-- Login Card Container -->
+<div class="relative z-10 w-full max-w-[480px]">
+<!-- MOME Logo Above Card -->
+<div class="flex flex-col items-center mb-8">
+<div class="mb-4">
+<img alt="NYC Media &amp; Entertainment Logo" class="h-32 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0ujqxFjlrppDjwK2nWDJvqtxFrzFeC2idqB6qKtzYUAlBuevhlxrm0P__ehwr_g6R23claomI2v7jfH3Q_SR0taVy0G2GJ3AtUHXR5M4rhYFK94Z7XdhGq12_Q3zORyeFujAVPKp3Siv6tJkZba0Ra5BlAB6tpV-pHwTIY4uQC6DyurbUJyY6p_hQO_wxADdxGUnBXDkvFEmHJBoAtw5MPXgVoS7BSEZZXoiWvA_Rl-KdiHw1JrzLHUNF8g_NC2pb0W5CeLkSGpg4w" style="">
+</div>
+<h1 class="text-white text-3xl font-bold tracking-tight text-center" style="">Permit Portal</h1>
+</div>
+<!-- Login Card -->
+<div class="bg-surface-container-lowest rounded-lg shadow-2xl p-10">
+<div class="mb-8">
+<h2 class="text-xl font-bold text-on-surface mb-2" style="">Log In to Your Account</h2>
+<p class="text-on-surface-variant text-sm" style="">Access your production dashboard and permits.</p>
+</div>
+<form class="space-y-6">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block text-[0.75rem] font-semibold text-on-surface-variant" for="email" style="">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border-0 ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary rounded-lg transition-all outline-none" id="email" name="email" placeholder="name@production.com" type="email">
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-[0.75rem] font-semibold text-on-surface-variant" for="password" style="">Password</label>
+<a class="text-[0.75rem] font-medium text-primary hover:underline" href="#" style="">Forgot Password?</a>
+</div>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border-0 ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary rounded-lg transition-all outline-none" id="password" name="password" placeholder="••••••••" type="password">
+</div>
+<!-- Primary Login Button -->
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-lg shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2" style="" type="submit">
+<span class="" style="">Log In</span>
+<span class="material-symbols-outlined text-sm" style="">arrow_forward</span>
+</button>
+<!-- Divider -->
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/30"></div>
+</div>
+<div class="relative flex justify-center text-[0.75rem] uppercase tracking-widest font-bold">
+<span class="bg-surface-container-lowest px-4 text-on-surface-variant/60" style="">or</span>
+</div>
+</div>
+<!-- Secondary NYC.ID Button -->
+<button class="w-full py-3.5 bg-surface-container-low border border-outline-variant/40 text-on-surface font-semibold rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-3" style="" type="button">
+<span class="material-symbols-outlined" data-icon="fingerprint" style="">fingerprint</span>
+<span class="" style="">Log In with NYC.ID</span>
+</button>
+</form>
+<!-- Footer Sign Up Link -->
+<div class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant" style="">
+                        Don't have an account? 
+                        <a class="text-primary font-semibold hover:underline" href="#" style="">Create an account</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-slate-900 dark:bg-black text-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full max-w-7xl mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="text-lg font-bold text-white" style=""></span>
+<p class="text-slate-400 text-[0.75rem] mt-2" style="">© 2024 City of New York. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-400 hover:text-white text-[0.75rem] transition-colors" href="#" style="">NYC.gov</a>
+<a class="text-slate-400 hover:text-white text-[0.75rem] transition-colors" href="#" style="">Accessibility</a>
+<a class="text-slate-400 hover:text-white text-[0.75rem] transition-colors" href="#" style="">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white text-[0.75rem] transition-colors" href="#" style="">Terms of Use</a>
+</div>
+</div>
+</footer>
+</body></html>
